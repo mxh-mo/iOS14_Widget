@@ -13,7 +13,38 @@
 		C05BB38B25820C2500EFB71B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05BB38925820C2500EFB71B /* Main.storyboard */; };
 		C05BB38D25820C2800EFB71B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C05BB38C25820C2800EFB71B /* Assets.xcassets */; };
 		C05BB39025820C2800EFB71B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05BB38E25820C2800EFB71B /* LaunchScreen.storyboard */; };
+		C05BB4082582105D00EFB71B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05BB39E25820D2400EFB71B /* WidgetKit.framework */; };
+		C05BB4092582105D00EFB71B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05BB3A025820D2400EFB71B /* SwiftUI.framework */; };
+		C05BB40C2582105D00EFB71B /* MOFitnessWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BB40B2582105D00EFB71B /* MOFitnessWidget.swift */; };
+		C05BB40F2582106000EFB71B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C05BB40E2582106000EFB71B /* Assets.xcassets */; };
+		C05BB4112582106000EFB71B /* MOFitnessWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C05BB40D2582105D00EFB71B /* MOFitnessWidget.intentdefinition */; };
+		C05BB4122582106000EFB71B /* MOFitnessWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C05BB40D2582105D00EFB71B /* MOFitnessWidget.intentdefinition */; };
+		C05BB4152582106000EFB71B /* MOFitnessWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C05BB4072582105D00EFB71B /* MOFitnessWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C05BB4132582106000EFB71B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C05BB37825820C2500EFB71B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C05BB4062582105D00EFB71B;
+			remoteInfo = MOFitnessWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C05BB3B125820D2600EFB71B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C05BB4152582106000EFB71B /* MOFitnessWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C05BB38025820C2500EFB71B /* MOWidgetDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOWidgetDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +55,13 @@
 		C05BB38C25820C2800EFB71B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C05BB38F25820C2800EFB71B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C05BB39125820C2800EFB71B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C05BB39E25820D2400EFB71B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C05BB3A025820D2400EFB71B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C05BB4072582105D00EFB71B /* MOFitnessWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MOFitnessWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C05BB40B2582105D00EFB71B /* MOFitnessWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOFitnessWidget.swift; sourceTree = "<group>"; };
+		C05BB40D2582105D00EFB71B /* MOFitnessWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MOFitnessWidget.intentdefinition; sourceTree = "<group>"; };
+		C05BB40E2582106000EFB71B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C05BB4102582106000EFB71B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +72,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C05BB4042582105D00EFB71B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C05BB4092582105D00EFB71B /* SwiftUI.framework in Frameworks */,
+				C05BB4082582105D00EFB71B /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -41,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				C05BB38225820C2500EFB71B /* MOWidgetDemo */,
+				C05BB40A2582105D00EFB71B /* MOFitnessWidget */,
+				C05BB39D25820D2400EFB71B /* Frameworks */,
 				C05BB38125820C2500EFB71B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				C05BB38025820C2500EFB71B /* MOWidgetDemo.app */,
+				C05BB4072582105D00EFB71B /* MOFitnessWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +117,26 @@
 			path = MOWidgetDemo;
 			sourceTree = "<group>";
 		};
+		C05BB39D25820D2400EFB71B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C05BB39E25820D2400EFB71B /* WidgetKit.framework */,
+				C05BB3A025820D2400EFB71B /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C05BB40A2582105D00EFB71B /* MOFitnessWidget */ = {
+			isa = PBXGroup;
+			children = (
+				C05BB40B2582105D00EFB71B /* MOFitnessWidget.swift */,
+				C05BB40D2582105D00EFB71B /* MOFitnessWidget.intentdefinition */,
+				C05BB40E2582106000EFB71B /* Assets.xcassets */,
+				C05BB4102582106000EFB71B /* Info.plist */,
+			);
+			path = MOFitnessWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +147,34 @@
 				C05BB37C25820C2500EFB71B /* Sources */,
 				C05BB37D25820C2500EFB71B /* Frameworks */,
 				C05BB37E25820C2500EFB71B /* Resources */,
+				C05BB3B125820D2600EFB71B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C05BB4142582106000EFB71B /* PBXTargetDependency */,
 			);
 			name = MOWidgetDemo;
 			productName = MOWidgetDemo;
 			productReference = C05BB38025820C2500EFB71B /* MOWidgetDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C05BB4062582105D00EFB71B /* MOFitnessWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C05BB4162582106000EFB71B /* Build configuration list for PBXNativeTarget "MOFitnessWidgetExtension" */;
+			buildPhases = (
+				C05BB4032582105D00EFB71B /* Sources */,
+				C05BB4042582105D00EFB71B /* Frameworks */,
+				C05BB4052582105D00EFB71B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MOFitnessWidgetExtension;
+			productName = MOFitnessWidgetExtension;
+			productReference = C05BB4072582105D00EFB71B /* MOFitnessWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -97,6 +186,9 @@
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					C05BB37F25820C2500EFB71B = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					C05BB4062582105D00EFB71B = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
@@ -115,6 +207,7 @@
 			projectRoot = "";
 			targets = (
 				C05BB37F25820C2500EFB71B /* MOWidgetDemo */,
+				C05BB4062582105D00EFB71B /* MOFitnessWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +223,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C05BB4052582105D00EFB71B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C05BB40F2582106000EFB71B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,11 +240,29 @@
 			files = (
 				C05BB38825820C2500EFB71B /* ViewController.swift in Sources */,
 				C05BB38425820C2500EFB71B /* AppDelegate.swift in Sources */,
+				C05BB4122582106000EFB71B /* MOFitnessWidget.intentdefinition in Sources */,
 				C05BB38625820C2500EFB71B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C05BB4032582105D00EFB71B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C05BB4112582106000EFB71B /* MOFitnessWidget.intentdefinition in Sources */,
+				C05BB40C2582105D00EFB71B /* MOFitnessWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C05BB4142582106000EFB71B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C05BB4062582105D00EFB71B /* MOFitnessWidgetExtension */;
+			targetProxy = C05BB4132582106000EFB71B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C05BB38925820C2500EFB71B /* Main.storyboard */ = {
@@ -284,6 +403,7 @@
 		C05BB39525820C2800EFB71B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +423,7 @@
 		C05BB39625820C2800EFB71B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,6 +435,48 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = moxiaoyan.MOWidgetDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C05BB4172582106000EFB71B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WUQQBVA6S;
+				INFOPLIST_FILE = MOFitnessWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = moxiaoyan.MOWidgetDemo.MOFitnessWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C05BB4182582106000EFB71B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WUQQBVA6S;
+				INFOPLIST_FILE = MOFitnessWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = moxiaoyan.MOWidgetDemo.MOFitnessWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -336,6 +499,15 @@
 			buildConfigurations = (
 				C05BB39525820C2800EFB71B /* Debug */,
 				C05BB39625820C2800EFB71B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C05BB4162582106000EFB71B /* Build configuration list for PBXNativeTarget "MOFitnessWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C05BB4172582106000EFB71B /* Debug */,
+				C05BB4182582106000EFB71B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
