@@ -23,7 +23,7 @@ struct MOCricleView: View {
     self.progress = progress
     exerciseDegress = [.degrees(MOCricleView.startDegress + 0 + MOCricleView.halfDegress), .degrees(MOCricleView.startDegress + (progress[0] * 120) - MOCricleView.halfDegress)]
     activeDegress = [.degrees(MOCricleView.startDegress + 120 + MOCricleView.halfDegress), .degrees(MOCricleView.startDegress + 120 + (progress[1] * 120) - MOCricleView.halfDegress)]
-    stepDegress = [.degrees(MOCricleView.startDegress + 240 + MOCricleView.halfDegress), .degrees(MOCricleView.startDegress + 240 + (progress[1] * 120) - MOCricleView.halfDegress)]
+    stepDegress = [.degrees(MOCricleView.startDegress + 240 + MOCricleView.halfDegress), .degrees(MOCricleView.startDegress + 240 + (progress[2] * 120) - MOCricleView.halfDegress)]
   }
   
   var body: some View {
