@@ -7,55 +7,57 @@
 
 import SwiftUI
 
-struct Arc: Shape {
-  var startAngle: Angle
-  var endAngle: Angle
-  var clockwise: Bool
-
-  func path(in rect: CGRect) -> Path {
-    var path = Path()
-    let rotationAdjustment = Angle.degrees(90)
-    let modifiedStart = startAngle - rotationAdjustment
-    let modifiedEnd = endAngle - rotationAdjustment
-//    path.str
-    path.addArc(center: CGPoint(x: rect.midX, y: rect.midY), radius: rect.width / 2, startAngle: modifiedStart, endAngle: modifiedEnd, clockwise: clockwise)
-//    path.stroke(lineWidth: 4.0)
-    return path
-  }
-}
-
 struct MOCricleView: View {
+  var progress: [Double]
+  static let startDegress: Double = 30
+  static let halfDegress: Double = 12.0
+  let blueDegress: [Angle] = [.degrees(startDegress + 0 + halfDegress), .degrees(startDegress + 120 - halfDegress)]
+  let greenDegress: [Angle] = [.degrees(startDegress + 120 + halfDegress), .degrees(startDegress + 240 - halfDegress)]
+  let redDegress: [Angle] = [.degrees(startDegress + 240 + halfDegress), .degrees(startDegress + 360 - halfDegress)]
+  
+  var exerciseDegress: [Angle] = [.degrees(startDegress + 0 + halfDegress), .degrees(startDegress + 60 - halfDegress)]
+  var activeDegress: [Angle] = [.degrees(startDegress + 240 + halfDegress), .degrees(startDegress + 300 - halfDegress)]
+  var stepDegress: [Angle] = [.degrees(startDegress + 120 + halfDegress), .degrees(startDegress + 180 - halfDegress)]
+
+  init(progress: [Double]) {
+    self.progress = progress
+    exerciseDegress = [.degrees(MOCricleView.startDegress + 0 + MOCricleView.halfDegress), .degrees(MOCricleView.startDegress + (progress[0] * 120) - MOCricleView.halfDegress)]
+    activeDegress = [.degrees(MOCricleView.startDegress + 120 + MOCricleView.halfDegress), .degrees(MOCricleView.startDegress + 120 + (progress[1] * 120) - MOCricleView.halfDegress)]
+    stepDegress = [.degrees(MOCricleView.startDegress + 240 + MOCricleView.halfDegress), .degrees(MOCricleView.startDegress + 240 + (progress[1] * 120) - MOCricleView.halfDegress)]
+  }
   
   var body: some View {
-    ZStack { // 重叠视图
-      Arc(startAngle: .degrees(5), endAngle: .degrees(115), clockwise: false)
-        .stroke(Color.red.opacity(0.5), lineWidth: 8)
-//        .stroke(style: StrokeStyle(lineWidth: 8.0, lineCap: .round))
-        .frame(width: 60, height: 60)
-//        .foregroundColor(.red)
-      Arc(startAngle: .degrees(125), endAngle: .degrees(235), clockwise: false)
-        .stroke(Color.blue.opacity(0.5), lineWidth: 8)
-//        .stroke(style: StrokeStyle(lineWidth: 8.0, lineCap: .round))
-        .frame(width: 60, height: 60)
-//        .foregroundColor(.blue)
-      Arc(startAngle: .degrees(245), endAngle: .degrees(355), clockwise: false)
-        .stroke(Color.green.opacity(0.5), lineWidth: 8)
-//        .stroke(style: StrokeStyle(lineWidth: 8.0, lineCap: .round))
-        .frame(width: 60, height: 60)
-//        .foregroundColor(.green)
+    GeometryReader { geometry in
+      ZStack {
+        Path { path in
+          path.addArc(center: CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2), radius: geometry.size.width / 2, startAngle: blueDegress[0], endAngle: blueDegress[1], clockwise: false)
+        }
+        .stroke(Color.blue.opacity(0.5), style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .miter))
+        Path { path in
+          path.addArc(center: CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2), radius: geometry.size.width / 2, startAngle: greenDegress[0], endAngle: greenDegress[1], clockwise: false)
+        }
+        .stroke(Color.green.opacity(0.5), style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .miter))
+        Path { path in
+          path.addArc(center: CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2), radius: geometry.size.width / 2, startAngle: redDegress[0], endAngle: redDegress[1], clockwise: false)
+        }
+        .stroke(Color.red.opacity(0.5), style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .miter))
+        
+        // value
+        Path { path in
+          path.addArc(center: CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2), radius: geometry.size.width / 2, startAngle: exerciseDegress[0], endAngle: exerciseDegress[1], clockwise: false)
+        }
+        .stroke(Color.blue, style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .miter))
+        Path { path in
+          path.addArc(center: CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2), radius: geometry.size.width / 2, startAngle: activeDegress [0], endAngle: activeDegress[1], clockwise: false)
+        }
+        .stroke(Color.green, style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .miter))
+        Path { path in
+          path.addArc(center: CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2), radius: geometry.size.width / 2, startAngle: stepDegress[0], endAngle: stepDegress[1], clockwise: false)
+        }
+        .stroke(Color.red, style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .miter))
+      }
     }
   }
-}
-
-func path(in rect: CGRect) -> Path {
-    let rotationAdjustment = Angle.degrees(90)
-    let modifiedStart = Angle.degrees(0) - rotationAdjustment
-    let modifiedEnd = Angle.degrees(120) - rotationAdjustment
-
-    var path = Path()
-    path.addArc(center: CGPoint(x: rect.midX, y: rect.midY), radius: rect.width / 2, startAngle: modifiedStart, endAngle: modifiedEnd, clockwise: true)
-
-    return path
 }
 
 struct MOSmallView: View {
@@ -63,13 +65,11 @@ struct MOSmallView: View {
   var body: some View {
     VStack {
       HStack {
-        MOCricleView()
+        MOCricleView(progress: [0.5, 0.3, 0.2])
           .frame(width: 52, height: 52, alignment: .leading)
           .foregroundColor(.blue)
-//          .background(Color.green)
         Spacer()
       }
-//      .background(Color.yellow)
       
       HStack {
         Text("--/--小时")
@@ -78,7 +78,6 @@ struct MOSmallView: View {
           .padding([.trailing])
         Spacer()
       }
-//      .background(Color.yellow)
       
       HStack {
         Text("--/--分钟")
@@ -86,7 +85,6 @@ struct MOSmallView: View {
           .font(.system(Font.TextStyle.body))
         Spacer()
       }
-//      .background(Color.yellow)
       
       HStack {
         Text("--/--步")
@@ -94,16 +92,11 @@ struct MOSmallView: View {
           .font(.system(Font.TextStyle.body))
         Spacer()
       }
-//      .background(Color.yellow)
-
-//      Text(entry.date, style: .time).font(.system(size: 10))
-//      Text("\(entry.data.number)").font(.system(size: 10))
 
     }
     .padding()
     .alignmentGuide(.leading, computeValue: { dimension in
       dimension[.leading]
     })
-    .background(Color.gray)
   }
 }

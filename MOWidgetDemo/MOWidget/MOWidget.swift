@@ -69,7 +69,7 @@ struct MOWidget: Widget {
     }
     .configurationDisplayName("My Widget")
     .description("This is an example widget.")
-    .supportedFamilies([.systemSmall, .systemMedium])
+    .supportedFamilies([.systemSmall]) //, .systemMedium
   }
 }
 
@@ -83,5 +83,6 @@ struct MOWidget_Previews: PreviewProvider {
 //        .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 
+    
   }
 }
