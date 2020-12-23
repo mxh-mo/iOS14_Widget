@@ -53,7 +53,16 @@ struct MOWidgetEntryView : View {
   var body: some View {
     switch family {
     case .systemSmall: MOSmallView()
-    case .systemMedium: MOSmallView()
+    case .systemMedium:
+      GeometryReader { geometry in
+        HStack {
+          MOSmallView()
+            .frame(width: geometry.size.width/2, height: geometry.size.height)
+          Spacer()
+          MOMediumView()
+            .frame(width: geometry.size.width/2, height: geometry.size.height)
+        }
+      }
     default: MOSmallView()
     }
   }
@@ -69,7 +78,7 @@ struct MOWidget: Widget {
     }
     .configurationDisplayName("My Widget")
     .description("This is an example widget.")
-    .supportedFamilies([.systemSmall]) //, .systemMedium
+    .supportedFamilies([.systemSmall, .systemMedium])
   }
 }
 
@@ -79,10 +88,8 @@ struct MOWidget_Previews: PreviewProvider {
       MOWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOData(number: 12)))
         .previewContext(WidgetPreviewContext(family: .systemSmall))
       
-//      MOWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOData(number: 12)))
-//        .previewContext(WidgetPreviewContext(family: .systemMedium))
+      MOWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOData(number: 12)))
+        .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
-
-    
   }
 }

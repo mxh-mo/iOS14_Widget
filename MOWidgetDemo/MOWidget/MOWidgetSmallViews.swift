@@ -8,38 +8,31 @@
 import SwiftUI
 
 struct MOCricleView: View {
-  static let startDegress: Double = 30
-  static let halfDegress: Double = 12.0
-  let length: Double = 96
-  
-  var progress: [Double]
+  var progress: [Float]
+  // background
   let blueDegress: [Angle]
   let greenDegress: [Angle]
   let redDegress: [Angle]
-  
+  // value
   var exerciseDegress: [Angle]
   var activeDegress: [Angle]
   var stepDegress: [Angle]
+  
+  let maximum: Float = 96
 
-  init(progress: [Double]) {
+  // origin value: 0-120 120-240 240-360
+  // margin value: 12-108 132-228 252-348 (间距: 24)
+  // offset value: 42-138 162-258 282-378 (调整角度: 偏移30)
+  init(progress: [Float]) {
     self.progress = progress
     
-    blueDegress = MOCricleView.calculateDegress(0, 120)
-    greenDegress = MOCricleView.calculateDegress(120, 240)
-    redDegress = MOCricleView.calculateDegress(240, 360)
+    blueDegress = [.degrees(42), .degrees(138)]
+    greenDegress = [.degrees(162), .degrees(258)]
+    redDegress = [.degrees(282), .degrees(378)]
     
-    exerciseDegress = MOCricleView.calculateDegress(0, (progress[0] * length))
-    activeDegress = MOCricleView.calculateDegress(120, 120 + (progress[1] * length))
-    stepDegress = MOCricleView.calculateDegress(240, 240 + (progress[2] * length))
-    
-    print("exerciseDegress: \(exerciseDegress[0].degrees) - \(exerciseDegress[1].degrees)")
-    print("activeDegress: \(activeDegress[0].degrees) - \(activeDegress[1].degrees)")
-    print("stepDegress: \(stepDegress[0].degrees) - \(stepDegress[1].degrees)")
-  }
-  
-  static func calculateDegress(_ start: Double, _ end: Double) -> [Angle] {
-    print("calculateDegress: \(start) - \(end)")
-    return [.degrees(startDegress + start + halfDegress), .degrees(startDegress + end - halfDegress)]
+    exerciseDegress = [.degrees(42), .degrees(Double(42 + floorf(progress[0] * maximum)))]
+    activeDegress = [.degrees(162), .degrees(Double(162 + floorf(progress[1] * maximum)))]
+    stepDegress = [.degrees(282), .degrees(Double(282 + floorf(progress[2] * maximum)))]
   }
   
   var body: some View {
@@ -54,7 +47,7 @@ struct MOCricleView: View {
             clockwise: false
           )
         }
-        .stroke(Color.blue.opacity(0.5), style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .miter))
+        .stroke(rgbColor(0xff008BE8).opacity(0.3), style: StrokeStyle(lineWidth: 7, lineCap: .round, lineJoin: .miter))
         Path { path in
           path.addArc(
             center: CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2),
@@ -64,7 +57,7 @@ struct MOCricleView: View {
             clockwise: false
           )
         }
-        .stroke(Color.green.opacity(0.5), style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .miter))
+        .stroke(rgbColor(0xff00D48A).opacity(0.3), style: StrokeStyle(lineWidth: 7, lineCap: .round, lineJoin: .miter))
         Path { path in
           path.addArc(
             center: CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2),
@@ -74,7 +67,7 @@ struct MOCricleView: View {
             clockwise: false
           )
         }
-        .stroke(Color.red.opacity(0.5), style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .miter))
+        .stroke(rgbColor(0xffFF5B18).opacity(0.3), style: StrokeStyle(lineWidth: 7, lineCap: .round, lineJoin: .miter))
         
         // value
         Path { path in
@@ -86,7 +79,7 @@ struct MOCricleView: View {
             clockwise: false
           )
         }
-        .stroke(Color.blue, style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .miter))
+        .stroke(rgbColor(0xff008BE8), style: StrokeStyle(lineWidth: 7, lineCap: .round, lineJoin: .miter))
         Path { path in
           path.addArc(
             center: CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2),
@@ -96,7 +89,7 @@ struct MOCricleView: View {
             clockwise: false
           )
         }
-        .stroke(Color.green, style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .miter))
+        .stroke(rgbColor(0xff00D48A), style: StrokeStyle(lineWidth: 7, lineCap: .round, lineJoin: .miter))
         Path { path in
           path.addArc(
             center: CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2),
@@ -106,7 +99,7 @@ struct MOCricleView: View {
             clockwise: false
           )
         }
-        .stroke(Color.red, style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .miter))
+        .stroke(rgbColor(0xffFF5B18), style: StrokeStyle(lineWidth: 7, lineCap: .round, lineJoin: .miter))
       }
     }
   }
@@ -115,40 +108,25 @@ struct MOCricleView: View {
 struct MOSmallView: View {
   
   var body: some View {
-    VStack {
+    VStack(alignment: .leading) {
       HStack {
-        MOCricleView(progress: [0.3, 0.2, 0.2])
+        MOCricleView(progress: [0.1, 0.2, 0.3])
           .frame(width: 52, height: 52, alignment: .leading)
           .foregroundColor(.blue)
         Spacer()
       }
-      
-      HStack {
-        Text("--/--小时")
-          .foregroundColor(.green)
-          .font(.system(Font.TextStyle.body))
-          .padding([.trailing])
-        Spacer()
-      }
-      
-      HStack {
-        Text("--/--分钟")
-          .foregroundColor(.blue)
-          .font(.system(Font.TextStyle.body))
-        Spacer()
-      }
-      
-      HStack {
-        Text("--/--步")
-          .foregroundColor(.red)
-          .font(.system(Font.TextStyle.body))
-        Spacer()
-      }
-
+      Text("— /— 小时")
+        .foregroundColor(rgbColor(0xff00D48A))
+        .font(.system(size: 18))
+      Spacer().frame(height: 4)
+      Text("— /— 分钟")
+        .foregroundColor(rgbColor(0xff008BE8))
+        .font(.system(size: 18))
+      Spacer().frame(height: 4)
+      Text("— /— 步")
+        .foregroundColor(rgbColor(0xffFF5B18))
+        .font(.system(size: 18))
     }
     .padding()
-    .alignmentGuide(.leading, computeValue: { dimension in
-      dimension[.leading]
-    })
   }
 }

@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C00426E32592CF4700DD529F /* MOWidgetCommons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00426DD2592C8D400DD529F /* MOWidgetCommons.swift */; };
+		C00426F02592D2A100DD529F /* MOWidgetMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00426E82592D1D400DD529F /* MOWidgetMediumView.swift */; };
+		C00426F92592EA4800DD529F /* MOMovesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00426F82592EA4800DD529F /* MOMovesView.swift */; };
+		C00427002592F00E00DD529F /* MOExcerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00426FC2592F00900DD529F /* MOExcerciseView.swift */; };
+		C00427072592F30800DD529F /* MOStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00427032592F30400DD529F /* MOStepsView.swift */; };
 		C05BB38425820C2500EFB71B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BB38325820C2500EFB71B /* AppDelegate.swift */; };
 		C05BB38625820C2500EFB71B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BB38525820C2500EFB71B /* SceneDelegate.swift */; };
 		C05BB38825820C2500EFB71B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BB38725820C2500EFB71B /* ViewController.swift */; };
 		C05BB38B25820C2500EFB71B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05BB38925820C2500EFB71B /* Main.storyboard */; };
 		C05BB38D25820C2800EFB71B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C05BB38C25820C2800EFB71B /* Assets.xcassets */; };
 		C05BB39025820C2800EFB71B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05BB38E25820C2800EFB71B /* LaunchScreen.storyboard */; };
-		C0AF5C182589FB4E00CAB802 /* MOWidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF5C172589FB4E00CAB802 /* MOWidgetViews.swift */; };
+		C0AF5C182589FB4E00CAB802 /* MOWidgetSmallViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF5C172589FB4E00CAB802 /* MOWidgetSmallViews.swift */; };
 		E05C3C7D2583B7EF0018AC1D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05C3C7C2583B7EF0018AC1D /* WidgetKit.framework */; };
 		E05C3C7F2583B7EF0018AC1D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05C3C7E2583B7EF0018AC1D /* SwiftUI.framework */; };
 		E05C3C822583B7EF0018AC1D /* MOWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05C3C812583B7EF0018AC1D /* MOWidget.swift */; };
@@ -48,6 +53,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C00426DD2592C8D400DD529F /* MOWidgetCommons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidgetCommons.swift; sourceTree = "<group>"; };
+		C00426E82592D1D400DD529F /* MOWidgetMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidgetMediumView.swift; sourceTree = "<group>"; };
+		C00426F82592EA4800DD529F /* MOMovesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOMovesView.swift; sourceTree = "<group>"; };
+		C00426FC2592F00900DD529F /* MOExcerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOExcerciseView.swift; sourceTree = "<group>"; };
+		C00427032592F30400DD529F /* MOStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOStepsView.swift; sourceTree = "<group>"; };
 		C05BB38025820C2500EFB71B /* MOWidgetDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOWidgetDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05BB38325820C2500EFB71B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C05BB38525820C2500EFB71B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +66,7 @@
 		C05BB38C25820C2800EFB71B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C05BB38F25820C2800EFB71B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C05BB39125820C2800EFB71B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0AF5C172589FB4E00CAB802 /* MOWidgetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidgetViews.swift; sourceTree = "<group>"; };
+		C0AF5C172589FB4E00CAB802 /* MOWidgetSmallViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidgetSmallViews.swift; sourceTree = "<group>"; };
 		E05C3C7A2583B7EF0018AC1D /* MOWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MOWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05C3C7C2583B7EF0018AC1D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		E05C3C7E2583B7EF0018AC1D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -86,6 +96,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C004270A25932C5500DD529F /* MOMediumViews */ = {
+			isa = PBXGroup;
+			children = (
+				C00426E82592D1D400DD529F /* MOWidgetMediumView.swift */,
+				C00426F82592EA4800DD529F /* MOMovesView.swift */,
+				C00426FC2592F00900DD529F /* MOExcerciseView.swift */,
+				C00427032592F30400DD529F /* MOStepsView.swift */,
+			);
+			path = MOMediumViews;
+			sourceTree = "<group>";
+		};
 		C05BB37725820C2500EFB71B = {
 			isa = PBXGroup;
 			children = (
@@ -132,7 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				E05C3C812583B7EF0018AC1D /* MOWidget.swift */,
-				C0AF5C172589FB4E00CAB802 /* MOWidgetViews.swift */,
+				C0AF5C172589FB4E00CAB802 /* MOWidgetSmallViews.swift */,
+				C004270A25932C5500DD529F /* MOMediumViews */,
+				C00426DD2592C8D400DD529F /* MOWidgetCommons.swift */,
 				E05C3C832583B7EF0018AC1D /* MOWidget.intentdefinition */,
 				E05C3C842583B7F00018AC1D /* Assets.xcassets */,
 				E05C3C862583B7F00018AC1D /* Info.plist */,
@@ -252,9 +275,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C00426F02592D2A100DD529F /* MOWidgetMediumView.swift in Sources */,
+				C00426F92592EA4800DD529F /* MOMovesView.swift in Sources */,
+				C00427072592F30800DD529F /* MOStepsView.swift in Sources */,
+				C00427002592F00E00DD529F /* MOExcerciseView.swift in Sources */,
+				C00426E32592CF4700DD529F /* MOWidgetCommons.swift in Sources */,
 				E05C3C872583B7F00018AC1D /* MOWidget.intentdefinition in Sources */,
 				E05C3C822583B7EF0018AC1D /* MOWidget.swift in Sources */,
-				C0AF5C182589FB4E00CAB802 /* MOWidgetViews.swift in Sources */,
+				C0AF5C182589FB4E00CAB802 /* MOWidgetSmallViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
