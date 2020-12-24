@@ -123,10 +123,11 @@ struct MOSmallView: View {
         .foregroundColor(rgbColor(0xff008BE8))
         .font(.system(size: 18))
       Spacer().frame(height: 4)
-      Text("— /— 步")
+      Text("2980/10000 step")
         .foregroundColor(rgbColor(0xffFF5B18))
         .font(.system(size: 18))
     }
-    .padding()
+    .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 0))
+    .background(Color.gray)
   }
 }
