@@ -16,13 +16,13 @@ struct MOMediumView: View {
     HStack(spacing: 0) {
       VStack(alignment: .leading) {
         MOActivitiesView(activities: activities)
-          .frame(width: 138, height: 30)
-        Spacer().frame(height:10)
+          .frame(width: kScale() * 138, height: kScale() * 30)
+        Spacer().frame(height:kScale() * 10)
         MOExcercisesView(exercises: exercises)
-          .frame(width: 138, height: 30)
-        Spacer().frame(height:10)
+          .frame(width: kScale() * 138, height: kScale() * 30)
+        Spacer().frame(height:kScale() * 10)
         MOStepsView(steps: steps)
-          .frame(width: 138, height: 30)
+          .frame(width: kScale() * 138, height: kScale() * 30)
         MOTimeView()
       }
       .padding()
@@ -38,16 +38,16 @@ struct MOTimeView: View {
     HStack(spacing: 0) {
       Text("0\(timeUnits)")
         .font(.caption2)
-        .frame(width: 34.5, height: 10, alignment: .leading)
+        .frame(width: kScale() * 34.5, height: 10, alignment: .leading)
       Text("6\(timeUnits)")
         .font(.caption2)
-        .frame(width: 34.5, height: 10, alignment: .leading)
+        .frame(width: kScale() * 34.5, height: 10, alignment: .leading)
       Text("12\(timeUnits)")
         .font(.caption2)
-        .frame(width: 34.5, height: 10, alignment: .leading)
+        .frame(width: kScale() * 34.5, height: 10, alignment: .leading)
       Text("18\(timeUnits)")
         .font(.caption2)
-        .frame(width: 34.5, height: 10, alignment: .leading)
+        .frame(width: kScale() * 34.5, height: 10, alignment: .leading)
     }
   }
 }

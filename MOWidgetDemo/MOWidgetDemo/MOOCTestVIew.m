@@ -11,7 +11,7 @@
 @implementation MOOCTestVIew
 
 + (void)reloadWidget {
-  
+
 }
 
 @end

@@ -22,6 +22,7 @@ class ViewController: UIViewController {
 
   @objc func clickBtn() {
     WidgetCenter.shared.reloadAllTimelines()
+    WidgetCenter.shared.reloadTimelines(ofKind: "MOWidget")
   }
   
   func login() {

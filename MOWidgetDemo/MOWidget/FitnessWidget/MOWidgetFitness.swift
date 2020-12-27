@@ -11,11 +11,11 @@ import Intents
 
 struct Provider: IntentTimelineProvider {
   func placeholder(in context: Context) -> MOSimpleEntry {
-    return MOSimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOData(number: 10))
+    return MOSimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOData(offset: 10))
   }
 
   func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (MOSimpleEntry) -> ()) {
-    let entry = MOSimpleEntry(date: Date(), configuration: configuration, data: MOData(number: 11))
+    let entry = MOSimpleEntry(date: Date(), configuration: configuration, data: MOData(offset: 11))
     completion(entry)
   }
 
@@ -26,7 +26,7 @@ struct Provider: IntentTimelineProvider {
     let currentDate = Date()
     for hourOffset in 0 ..< 5 {
         let entryDate = Calendar.current.date(byAdding: .second, value: 3*hourOffset, to: currentDate)!
-        let entry = MOSimpleEntry(date: entryDate, configuration: configuration, data: MOData(number: hourOffset))
+        let entry = MOSimpleEntry(date: entryDate, configuration: configuration, data: MOData(offset: hourOffset))
         entries.append(entry)
     }
 
@@ -36,7 +36,7 @@ struct Provider: IntentTimelineProvider {
 }
 
 struct MOData {
-  let number: Int
+  let offset: Int
 }
 
 struct MOSimpleEntry: TimelineEntry {
@@ -86,11 +86,11 @@ struct MOFitnessWidget_Previews: PreviewProvider {
   static var previews: some View {
     Group {
       ForEach(["iPhone 12 mini", "iPhone 12", "iPhone 12 Pro Max"], id: \.self) { deviceName in
-        MOWidgetEntryView(entry: MOSimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOData(number: 12)))
-          .previewContext(WidgetPreviewContext(family: .systemSmall))
-          .previewDevice(PreviewDevice(rawValue: deviceName))
+//        MOWidgetEntryView(entry: MOSimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOData(offset: 12)))
+//          .previewContext(WidgetPreviewContext(family: .systemSmall))
+//          .previewDevice(PreviewDevice(rawValue: deviceName))
         
-        MOWidgetEntryView(entry: MOSimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOData(number: 12)))
+        MOWidgetEntryView(entry: MOSimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOData(offset: 12)))
           .previewContext(WidgetPreviewContext(family: .systemMedium))
           .previewDevice(PreviewDevice(rawValue: deviceName))
       }
