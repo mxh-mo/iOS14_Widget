@@ -9,9 +9,9 @@ import Foundation
 
 struct MOFitnessData {
   static let shared: MOFitnessData = MOFitnessData()
-  var screenHeight: Float = 169 {
+  var screenHeight: Float = 169.0 {
     didSet {
-      scale = screenHeight / 169
+      scale = screenHeight / 169.0
     }
   }
   var scale: Float = 1.0
@@ -37,8 +37,8 @@ struct MOFitnessData {
   }
 }
 
-struct WWFitnessDataSouce {
-  static let shared = WWFitnessDataSouce()
+struct MODataSouce {
+  static let shared = MODataSouce()
   // MARK: 请求数据
   func fetchData(fetchSuccess: @escaping (MOFitnessData) -> Void, fetchFailure: @escaping () -> Void) {
     // 模拟耗时网络请求

@@ -8,8 +8,11 @@
 import Foundation
 import SwiftUI
 
-public func kScale() -> CGFloat {
-  return CGFloat(MOFitnessData.shared.scale)
+var kScale: CGFloat = 1.0
+
+public func setScreenHeight(_ screenHeight: CGFloat) -> CGFloat {
+  kScale = screenHeight / 169.0
+  return 0.0
 }
 
 public func rgbColor(_ color: Int64) -> Color {

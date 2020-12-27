@@ -28,21 +28,13 @@ class WWWidgetManager: NSObject {
 }
 
 class WWAppGroupManager: NSObject {
-  static let kAppGroupIdentify = "group.com.mobvoi.One"
-  static let kUserInfoKey = "mo_app_group_user_info"
+  static let kAppGroupIdentify = "group.mo.widget"
+  static let kUserInfoKey = "user_info"
   
   // MARK: - 保存用户信息
   @objc static func setUserInfo(_ info: [AnyHashable : Any]) {
     let userDefaults = UserDefaults(suiteName: kAppGroupIdentify)
     userDefaults?.setValue(info, forKey: kUserInfoKey)
-    
-    // 刷新widget
-    if #available(iOS 14.0, *) {
-      WWWidgetManager.shared.reloadAllTimelines()
-    } else {
-      // Fallback on earlier versions
-      print("earlier versions can't supported iOS14 widget")
-    }
   }
   
   // MARK: - 获取用户信息

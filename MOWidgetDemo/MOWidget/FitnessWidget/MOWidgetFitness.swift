@@ -11,27 +11,29 @@ import Intents
 
 struct Provider: IntentTimelineProvider {
   func placeholder(in context: Context) -> MOSimpleEntry {
-    return MOSimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOData(offset: 10))
+    return MOSimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOFitnessData())
   }
 
   func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (MOSimpleEntry) -> ()) {
-    let entry = MOSimpleEntry(date: Date(), configuration: configuration, data: MOData(offset: 11))
+    let entry = MOSimpleEntry(date: Date(), configuration: configuration, data: MOFitnessData())
     completion(entry)
   }
 
   func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<MOSimpleEntry>) -> ()) {
     var entries: [MOSimpleEntry] = []
-
-    // Generate a timeline consisting of five entries an hour apart, starting from the current date.
     let currentDate = Date()
-    for hourOffset in 0 ..< 5 {
-        let entryDate = Calendar.current.date(byAdding: .second, value: 3*hourOffset, to: currentDate)!
-        let entry = MOSimpleEntry(date: entryDate, configuration: configuration, data: MOData(offset: hourOffset))
-        entries.append(entry)
+    let entryDate = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
+    MODataSouce.shared.fetchData { (data) in
+      // 请求成功
+      let entry = MOSimpleEntry(date: entryDate, configuration: configuration, data: data)
+      entries.append(entry)
+      let timeline = Timeline(entries: entries, policy: .atEnd)
+      completion(timeline)
+    } fetchFailure: {
+      // 请求失败
+      let timeline = Timeline(entries: entries, policy: .atEnd)
+      completion(timeline)
     }
-
-    let timeline = Timeline(entries: entries, policy: .atEnd)
-    completion(timeline)
   }
 }
 
@@ -42,7 +44,7 @@ struct MOData {
 struct MOSimpleEntry: TimelineEntry {
   let date: Date
   let configuration: ConfigurationIntent
-  let data: MOData
+  let data: MOFitnessData
 }
 
 struct MOWidgetEntryView : View {
@@ -86,11 +88,11 @@ struct MOFitnessWidget_Previews: PreviewProvider {
   static var previews: some View {
     Group {
       ForEach(["iPhone 12 mini", "iPhone 12", "iPhone 12 Pro Max"], id: \.self) { deviceName in
-//        MOWidgetEntryView(entry: MOSimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOData(offset: 12)))
+//        MOWidgetEntryView(entry: MOSimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOFitnessData()))
 //          .previewContext(WidgetPreviewContext(family: .systemSmall))
 //          .previewDevice(PreviewDevice(rawValue: deviceName))
         
-        MOWidgetEntryView(entry: MOSimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOData(offset: 12)))
+        MOWidgetEntryView(entry: MOSimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOFitnessData()))
           .previewContext(WidgetPreviewContext(family: .systemMedium))
           .previewDevice(PreviewDevice(rawValue: deviceName))
       }

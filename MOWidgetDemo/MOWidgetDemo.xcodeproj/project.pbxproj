@@ -19,9 +19,10 @@
 		C05BB38D25820C2800EFB71B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C05BB38C25820C2800EFB71B /* Assets.xcassets */; };
 		C05BB39025820C2800EFB71B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05BB38E25820C2800EFB71B /* LaunchScreen.storyboard */; };
 		C0AF5C182589FB4E00CAB802 /* MOWidgetSmallViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF5C172589FB4E00CAB802 /* MOWidgetSmallViews.swift */; };
+		E022B7272598991500AFE562 /* MODataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0590D3A25972759000E08EE /* MODataSource.swift */; };
+		E022B74225989E2100AFE562 /* Info.strings in Resources */ = {isa = PBXBuildFile; fileRef = E022B74425989E2100AFE562 /* Info.strings */; };
 		E02C25B225972C3700416F82 /* MOWidgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02C25B125972C3700416F82 /* MOWidgetManager.swift */; };
 		E02C25B825972D6A00416F82 /* MOOCTestVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = E02C25B725972D6A00416F82 /* MOOCTestVIew.m */; };
-		E0590CC52596E447000E08EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0590CC82596E447000E08EE /* Localizable.strings */; };
 		E0590CC62596E447000E08EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0590CC82596E447000E08EE /* Localizable.strings */; };
 		E0590D2D259724DD000E08EE /* MOWidgetSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0590D2C259724DD000E08EE /* MOWidgetSecond.swift */; };
 		E0590D2E259724DD000E08EE /* MOWidgetSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0590D2C259724DD000E08EE /* MOWidgetSecond.swift */; };
@@ -74,6 +75,7 @@
 		C05BB38F25820C2800EFB71B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C05BB39125820C2800EFB71B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AF5C172589FB4E00CAB802 /* MOWidgetSmallViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidgetSmallViews.swift; sourceTree = "<group>"; };
+		E022B74325989E2100AFE562 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Info.strings; sourceTree = "<group>"; };
 		E02C25AE25972A8500416F82 /* MOWidgetDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MOWidgetDemo.entitlements; sourceTree = "<group>"; };
 		E02C25B125972C3700416F82 /* MOWidgetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidgetManager.swift; sourceTree = "<group>"; };
 		E02C25B525972D6900416F82 /* MOWidgetDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MOWidgetDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -157,11 +159,11 @@
 				E02C25B625972D6A00416F82 /* MOOCTestVIew.h */,
 				E02C25B725972D6A00416F82 /* MOOCTestVIew.m */,
 				E02C25B125972C3700416F82 /* MOWidgetManager.swift */,
+				E022B74425989E2100AFE562 /* Info.strings */,
 				C05BB38925820C2500EFB71B /* Main.storyboard */,
 				C05BB38C25820C2800EFB71B /* Assets.xcassets */,
 				C05BB38E25820C2800EFB71B /* LaunchScreen.storyboard */,
 				C05BB39125820C2800EFB71B /* Info.plist */,
-				E0590CC82596E447000E08EE /* Localizable.strings */,
 				E02C25B525972D6900416F82 /* MOWidgetDemo-Bridging-Header.h */,
 			);
 			path = MOWidgetDemo;
@@ -171,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				E05C3C812583B7EF0018AC1D /* MOWidgetFitness.swift */,
-				E0590D3A25972759000E08EE /* MODataSource.swift */,
 				C0AF5C172589FB4E00CAB802 /* MOWidgetSmallViews.swift */,
 				C004270A25932C5500DD529F /* MOMediumViews */,
 			);
@@ -200,7 +201,9 @@
 			children = (
 				E0590D31259726B2000E08EE /* FitnessWidget */,
 				E0590D32259726C1000E08EE /* SecondWidget */,
+				E0590D3A25972759000E08EE /* MODataSource.swift */,
 				C00426DD2592C8D400DD529F /* MOWidgetCommons.swift */,
+				E0590CC82596E447000E08EE /* Localizable.strings */,
 				E05C3C832583B7EF0018AC1D /* MOWidget.intentdefinition */,
 				E05C3C842583B7F00018AC1D /* Assets.xcassets */,
 				E05C3C862583B7F00018AC1D /* Info.plist */,
@@ -291,8 +294,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E022B74225989E2100AFE562 /* Info.strings in Resources */,
 				C05BB39025820C2800EFB71B /* LaunchScreen.storyboard in Resources */,
-				E0590CC52596E447000E08EE /* Localizable.strings in Resources */,
 				C05BB38D25820C2800EFB71B /* Assets.xcassets in Resources */,
 				C05BB38B25820C2500EFB71B /* Main.storyboard in Resources */,
 			);
@@ -318,6 +321,7 @@
 				E02C25B825972D6A00416F82 /* MOOCTestVIew.m in Sources */,
 				C05BB38425820C2500EFB71B /* AppDelegate.swift in Sources */,
 				E05C3C882583B7F00018AC1D /* MOWidget.intentdefinition in Sources */,
+				E022B7272598991500AFE562 /* MODataSource.swift in Sources */,
 				C05BB38625820C2500EFB71B /* SceneDelegate.swift in Sources */,
 				E02C25B225972C3700416F82 /* MOWidgetManager.swift in Sources */,
 				E0590D2D259724DD000E08EE /* MOWidgetSecond.swift in Sources */,
@@ -370,6 +374,14 @@
 				E0590CCD2596E4AF000E08EE /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E022B74425989E2100AFE562 /* Info.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E022B74325989E2100AFE562 /* en */,
+			);
+			name = Info.strings;
 			sourceTree = "<group>";
 		};
 		E0590CC82596E447000E08EE /* Localizable.strings */ = {

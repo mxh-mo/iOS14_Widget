@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MOStepsView: View {
   var steps: [Float]
-  let maxHeight: CGFloat = kScale() * 13.0
+  let maxHeight: CGFloat = kScale * 13.0
   var maximun: Float = 0.0
 
   init(steps: [Float]) {
@@ -34,7 +34,7 @@ struct MOStepsView: View {
               VStack(spacing: 1) {
                 ForEach([0, 1, 2, 3, 4, 6, 7], id: \.self) { value in
                   Circle()
-                    .frame(width: kScale() * 1, height: kScale() * 1)
+                    .frame(width: kScale * 1, height: kScale * 1)
                     .foregroundColor(Color("dottedLine"))
                 }
               }
@@ -43,10 +43,10 @@ struct MOStepsView: View {
             if (steps[index] > 0.1) {
               Capsule()
                 .fill(rgbColor(0xffFF5B18))
-                .frame(width: kScale() * 2, height: maxHeight * CGFloat((steps[index] / self.maximun)))
+                .frame(width: kScale * 2, height: maxHeight * CGFloat((steps[index] / self.maximun)))
             } else {
               Circle()
-                .frame(width: kScale() * 2, height: kScale() * 2)
+                .frame(width: kScale * 2, height: kScale * 2)
                 .foregroundColor(rgbColor(0xffFF5B18).opacity(0.3))
             }
           }
