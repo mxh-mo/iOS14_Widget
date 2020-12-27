@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  MOWidgetDemo
+
+  Created by 莫晓卉 on 2020/12/26.
+  
+*/
+"widget.name" = "今日健康记录";
+"widget.description" = "小问健康记录你的活动情况";
+
+"widget.actives" = "动动";
+"widget.activeUnits" = "小时";
+"widget.exercises" = "锻炼";
+"widget.exerciseUnits" = "分钟";
+"widget.steps" = "步数";
+"widget.stepsUnits" = "步";
+
+"widget.timeUnits" = "时";

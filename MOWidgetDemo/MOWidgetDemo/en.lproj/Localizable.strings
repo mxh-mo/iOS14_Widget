@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  MOWidgetDemo
+
+  Created by 莫晓卉 on 2020/12/26.
+  
+*/
+"widget.name" = "Today Activity Record";
+"widget.description" = "TicHealth Keep a record of your activities";
+
+"widget.actives" = "actives";
+"widget.activeUnits" = "hour";
+"widget.exercises" = "exercises";
+"widget.exerciseUnits" = "minute";
+"widget.steps" = "steps";
+"widget.stepsUnits" = "step";
+
+"widget.timeUnits" = "";

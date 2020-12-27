@@ -1,5 +1,5 @@
 //
-//  MOMovesView.swift
+//  MOActivitiesView.swift
 //  MOWidgetExtension
 //
 //  Created by 莫晓卉 on 2020/12/23.
@@ -7,34 +7,34 @@
 
 import SwiftUI
 
-struct MOMovesView: View {
-  var moves: [Bool]
+struct MOActivitiesView: View {
+  var activities: [Bool]
   
   var body: some View {
     GeometryReader { geometry in
       VStack(alignment: .leading, spacing: 0) {
-        Text("动动")
-          .font(.system(size: 12, weight: .medium))
+        Text(NSLocalizedString("widget.actives", comment: "actives"))
+          .font(.caption)
         
         Spacer().frame(height:5)
         
         HStack(spacing: 0.5) {
           
-          ForEach(moves.indices, id: \.self) { index in
+          ForEach(activities.indices, id: \.self) { index in
             if (index % 6 == 0) {
               // line
               VStack(spacing: 1) {
                 ForEach([0, 1, 2], id: \.self) { value in
                   Circle()
                     .frame(width: 1, height: 1)
-                    .foregroundColor(Color.black.opacity(0.3))
+                    .foregroundColor(Color("dottedLine"))
                 }
               }
             }
             // value point
             Circle()
               .frame(width: 5, height: 5)
-              .foregroundColor(rgbColor(0xff00D48A).opacity(moves[index] ? 1 : 0.3))
+              .foregroundColor(rgbColor(0xff00D48A).opacity(activities[index] ? 1 : 0.3))
           }
         }
       }

@@ -106,28 +106,57 @@ struct MOCricleView: View {
 }
 
 struct MOSmallView: View {
-  
+  let data: MOFitnessData
+  let activitiesUnits: String = NSLocalizedString("widget.activeUnits", comment: "hour")
+  let exerciseUnits: String = NSLocalizedString("widget.exerciseUnits", comment: "minute")
+  let stepsUnits: String = NSLocalizedString("widget.stepsUnits", comment: "step")
+  var excercise: String
+  var excerciseGoal: String
+  var active: String
+  var activeGoal: String
+  var step: String
+  var stepGoal: String
+  init(data: MOFitnessData) {
+    self.data = data
+    active = data.activesNow > 0 ? "\(data.activesNow)" : "— "
+    activeGoal = data.activesGoal > 0 ? "\(data.activesGoal)" : "— "
+    
+    excercise = data.exercisesNow > 0 ? "\(data.exercisesNow)" : "— "
+    excerciseGoal = data.exercisesGoal > 0 ? "\(data.exercisesGoal)" : "— "
+    
+    step = data.stepsNow > 0 ? "\(data.stepsNow)" : "— "
+    stepGoal = data.stepsGoal > 0 ? "\(data.stepsGoal)" : "— "
+  }
   var body: some View {
     VStack(alignment: .leading) {
       HStack {
-        MOCricleView(progress: [0.1, 0.2, 0.3])
-          .frame(width: 52, height: 52, alignment: .leading)
+        MOCricleView(progress: data.progress())
+          .frame(width: kScale() * 52, height: kScale() * 52, alignment: .leading)
           .foregroundColor(.blue)
         Spacer()
       }
-      Text("— /— 小时")
-        .foregroundColor(rgbColor(0xff00D48A))
-        .font(.system(size: 18))
+      Spacer().frame(height: 16)
+      HStack {
+        Text("\(active)/\(activeGoal) \(activitiesUnits)")
+          .foregroundColor(rgbColor(0xff00D48A))
+          .font(.system(size: kScale() * 16, weight: .medium))
+      }
+
       Spacer().frame(height: 4)
-      Text("— /— 分钟")
-        .foregroundColor(rgbColor(0xff008BE8))
-        .font(.system(size: 18))
+      HStack {
+        Text("\(excercise)/\(excerciseGoal) \(exerciseUnits)")
+          .foregroundColor(rgbColor(0xff008BE8))
+          .font(.system(size: kScale() * 16, weight: .medium))
+      }
+
       Spacer().frame(height: 4)
-      Text("2980/10000 step")
-        .foregroundColor(rgbColor(0xffFF5B18))
-        .font(.system(size: 18))
+      HStack {
+        Text("\(step)/\(stepGoal) \(stepsUnits)")
+          .foregroundColor(rgbColor(0xffFF5B18))
+          .font(.system(size: kScale() * 16, weight: .medium))
+      }
+
     }
     .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 0))
-    .background(Color.gray)
   }
 }

@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		C00426E32592CF4700DD529F /* MOWidgetCommons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00426DD2592C8D400DD529F /* MOWidgetCommons.swift */; };
 		C00426F02592D2A100DD529F /* MOWidgetMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00426E82592D1D400DD529F /* MOWidgetMediumView.swift */; };
-		C00426F92592EA4800DD529F /* MOMovesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00426F82592EA4800DD529F /* MOMovesView.swift */; };
-		C00427002592F00E00DD529F /* MOExcerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00426FC2592F00900DD529F /* MOExcerciseView.swift */; };
+		C00426F92592EA4800DD529F /* MOActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00426F82592EA4800DD529F /* MOActivitiesView.swift */; };
+		C00427002592F00E00DD529F /* MOExcercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00426FC2592F00900DD529F /* MOExcercisesView.swift */; };
 		C00427072592F30800DD529F /* MOStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00427032592F30400DD529F /* MOStepsView.swift */; };
 		C05BB38425820C2500EFB71B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BB38325820C2500EFB71B /* AppDelegate.swift */; };
 		C05BB38625820C2500EFB71B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BB38525820C2500EFB71B /* SceneDelegate.swift */; };
@@ -19,9 +19,16 @@
 		C05BB38D25820C2800EFB71B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C05BB38C25820C2800EFB71B /* Assets.xcassets */; };
 		C05BB39025820C2800EFB71B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05BB38E25820C2800EFB71B /* LaunchScreen.storyboard */; };
 		C0AF5C182589FB4E00CAB802 /* MOWidgetSmallViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF5C172589FB4E00CAB802 /* MOWidgetSmallViews.swift */; };
+		E02C25B225972C3700416F82 /* MOWidgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02C25B125972C3700416F82 /* MOWidgetManager.swift */; };
+		E02C25B825972D6A00416F82 /* MOOCTestVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = E02C25B725972D6A00416F82 /* MOOCTestVIew.m */; };
+		E0590CC52596E447000E08EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0590CC82596E447000E08EE /* Localizable.strings */; };
+		E0590CC62596E447000E08EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0590CC82596E447000E08EE /* Localizable.strings */; };
+		E0590D2D259724DD000E08EE /* MOWidgetSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0590D2C259724DD000E08EE /* MOWidgetSecond.swift */; };
+		E0590D2E259724DD000E08EE /* MOWidgetSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0590D2C259724DD000E08EE /* MOWidgetSecond.swift */; };
+		E0590D3C25972759000E08EE /* MODataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0590D3A25972759000E08EE /* MODataSource.swift */; };
 		E05C3C7D2583B7EF0018AC1D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05C3C7C2583B7EF0018AC1D /* WidgetKit.framework */; };
 		E05C3C7F2583B7EF0018AC1D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05C3C7E2583B7EF0018AC1D /* SwiftUI.framework */; };
-		E05C3C822583B7EF0018AC1D /* MOWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05C3C812583B7EF0018AC1D /* MOWidget.swift */; };
+		E05C3C822583B7EF0018AC1D /* MOWidgetFitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05C3C812583B7EF0018AC1D /* MOWidgetFitness.swift */; };
 		E05C3C852583B7F00018AC1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05C3C842583B7F00018AC1D /* Assets.xcassets */; };
 		E05C3C872583B7F00018AC1D /* MOWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E05C3C832583B7EF0018AC1D /* MOWidget.intentdefinition */; };
 		E05C3C882583B7F00018AC1D /* MOWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E05C3C832583B7EF0018AC1D /* MOWidget.intentdefinition */; };
@@ -55,8 +62,8 @@
 /* Begin PBXFileReference section */
 		C00426DD2592C8D400DD529F /* MOWidgetCommons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidgetCommons.swift; sourceTree = "<group>"; };
 		C00426E82592D1D400DD529F /* MOWidgetMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidgetMediumView.swift; sourceTree = "<group>"; };
-		C00426F82592EA4800DD529F /* MOMovesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOMovesView.swift; sourceTree = "<group>"; };
-		C00426FC2592F00900DD529F /* MOExcerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOExcerciseView.swift; sourceTree = "<group>"; };
+		C00426F82592EA4800DD529F /* MOActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOActivitiesView.swift; sourceTree = "<group>"; };
+		C00426FC2592F00900DD529F /* MOExcercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOExcercisesView.swift; sourceTree = "<group>"; };
 		C00427032592F30400DD529F /* MOStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOStepsView.swift; sourceTree = "<group>"; };
 		C05BB38025820C2500EFB71B /* MOWidgetDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOWidgetDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05BB38325820C2500EFB71B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,10 +74,24 @@
 		C05BB38F25820C2800EFB71B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C05BB39125820C2800EFB71B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AF5C172589FB4E00CAB802 /* MOWidgetSmallViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidgetSmallViews.swift; sourceTree = "<group>"; };
+		E02C25AE25972A8500416F82 /* MOWidgetDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MOWidgetDemo.entitlements; sourceTree = "<group>"; };
+		E02C25B125972C3700416F82 /* MOWidgetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidgetManager.swift; sourceTree = "<group>"; };
+		E02C25B525972D6900416F82 /* MOWidgetDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MOWidgetDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		E02C25B625972D6A00416F82 /* MOOCTestVIew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MOOCTestVIew.h; sourceTree = "<group>"; };
+		E02C25B725972D6A00416F82 /* MOOCTestVIew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MOOCTestVIew.m; sourceTree = "<group>"; };
+		E0590CB82596DD1F000E08EE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		E0590CB92596DD1F000E08EE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		E0590CC72596E447000E08EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E0590CCB2596E44C000E08EE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E0590CCC2596E4AF000E08EE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		E0590CCD2596E4AF000E08EE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		E0590CCE2596E4AF000E08EE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E0590D2C259724DD000E08EE /* MOWidgetSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidgetSecond.swift; sourceTree = "<group>"; };
+		E0590D3A25972759000E08EE /* MODataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MODataSource.swift; sourceTree = "<group>"; };
 		E05C3C7A2583B7EF0018AC1D /* MOWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MOWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05C3C7C2583B7EF0018AC1D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		E05C3C7E2583B7EF0018AC1D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		E05C3C812583B7EF0018AC1D /* MOWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidget.swift; sourceTree = "<group>"; };
+		E05C3C812583B7EF0018AC1D /* MOWidgetFitness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidgetFitness.swift; sourceTree = "<group>"; };
 		E05C3C832583B7EF0018AC1D /* MOWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MOWidget.intentdefinition; sourceTree = "<group>"; };
 		E05C3C842583B7F00018AC1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E05C3C862583B7F00018AC1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,8 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				C00426E82592D1D400DD529F /* MOWidgetMediumView.swift */,
-				C00426F82592EA4800DD529F /* MOMovesView.swift */,
-				C00426FC2592F00900DD529F /* MOExcerciseView.swift */,
+				C00426F82592EA4800DD529F /* MOActivitiesView.swift */,
+				C00426FC2592F00900DD529F /* MOExcercisesView.swift */,
 				C00427032592F30400DD529F /* MOStepsView.swift */,
 			);
 			path = MOMediumViews;
@@ -129,15 +150,40 @@
 		C05BB38225820C2500EFB71B /* MOWidgetDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E02C25AE25972A8500416F82 /* MOWidgetDemo.entitlements */,
 				C05BB38325820C2500EFB71B /* AppDelegate.swift */,
 				C05BB38525820C2500EFB71B /* SceneDelegate.swift */,
 				C05BB38725820C2500EFB71B /* ViewController.swift */,
+				E02C25B625972D6A00416F82 /* MOOCTestVIew.h */,
+				E02C25B725972D6A00416F82 /* MOOCTestVIew.m */,
+				E02C25B125972C3700416F82 /* MOWidgetManager.swift */,
 				C05BB38925820C2500EFB71B /* Main.storyboard */,
 				C05BB38C25820C2800EFB71B /* Assets.xcassets */,
 				C05BB38E25820C2800EFB71B /* LaunchScreen.storyboard */,
 				C05BB39125820C2800EFB71B /* Info.plist */,
+				E0590CC82596E447000E08EE /* Localizable.strings */,
+				E02C25B525972D6900416F82 /* MOWidgetDemo-Bridging-Header.h */,
 			);
 			path = MOWidgetDemo;
+			sourceTree = "<group>";
+		};
+		E0590D31259726B2000E08EE /* FitnessWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E05C3C812583B7EF0018AC1D /* MOWidgetFitness.swift */,
+				E0590D3A25972759000E08EE /* MODataSource.swift */,
+				C0AF5C172589FB4E00CAB802 /* MOWidgetSmallViews.swift */,
+				C004270A25932C5500DD529F /* MOMediumViews */,
+			);
+			path = FitnessWidget;
+			sourceTree = "<group>";
+		};
+		E0590D32259726C1000E08EE /* SecondWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E0590D2C259724DD000E08EE /* MOWidgetSecond.swift */,
+			);
+			path = SecondWidget;
 			sourceTree = "<group>";
 		};
 		E05C3C7B2583B7EF0018AC1D /* Frameworks */ = {
@@ -152,9 +198,8 @@
 		E05C3C802583B7EF0018AC1D /* MOWidget */ = {
 			isa = PBXGroup;
 			children = (
-				E05C3C812583B7EF0018AC1D /* MOWidget.swift */,
-				C0AF5C172589FB4E00CAB802 /* MOWidgetSmallViews.swift */,
-				C004270A25932C5500DD529F /* MOMediumViews */,
+				E0590D31259726B2000E08EE /* FitnessWidget */,
+				E0590D32259726C1000E08EE /* SecondWidget */,
 				C00426DD2592C8D400DD529F /* MOWidgetCommons.swift */,
 				E05C3C832583B7EF0018AC1D /* MOWidget.intentdefinition */,
 				E05C3C842583B7F00018AC1D /* Assets.xcassets */,
@@ -213,6 +258,7 @@
 				TargetAttributes = {
 					C05BB37F25820C2500EFB71B = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					E05C3C792583B7EF0018AC1D = {
 						CreatedOnToolsVersion = 12.2;
@@ -226,6 +272,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = C05BB37725820C2500EFB71B;
 			productRefGroup = C05BB38125820C2500EFB71B /* Products */;
@@ -244,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C05BB39025820C2800EFB71B /* LaunchScreen.storyboard in Resources */,
+				E0590CC52596E447000E08EE /* Localizable.strings in Resources */,
 				C05BB38D25820C2800EFB71B /* Assets.xcassets in Resources */,
 				C05BB38B25820C2500EFB71B /* Main.storyboard in Resources */,
 			);
@@ -254,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E05C3C852583B7F00018AC1D /* Assets.xcassets in Resources */,
+				E0590CC62596E447000E08EE /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +315,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C05BB38825820C2500EFB71B /* ViewController.swift in Sources */,
+				E02C25B825972D6A00416F82 /* MOOCTestVIew.m in Sources */,
 				C05BB38425820C2500EFB71B /* AppDelegate.swift in Sources */,
 				E05C3C882583B7F00018AC1D /* MOWidget.intentdefinition in Sources */,
 				C05BB38625820C2500EFB71B /* SceneDelegate.swift in Sources */,
+				E02C25B225972C3700416F82 /* MOWidgetManager.swift in Sources */,
+				E0590D2D259724DD000E08EE /* MOWidgetSecond.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,14 +328,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0590D3C25972759000E08EE /* MODataSource.swift in Sources */,
 				C00426F02592D2A100DD529F /* MOWidgetMediumView.swift in Sources */,
-				C00426F92592EA4800DD529F /* MOMovesView.swift in Sources */,
+				C00426F92592EA4800DD529F /* MOActivitiesView.swift in Sources */,
 				C00427072592F30800DD529F /* MOStepsView.swift in Sources */,
-				C00427002592F00E00DD529F /* MOExcerciseView.swift in Sources */,
+				C00427002592F00E00DD529F /* MOExcercisesView.swift in Sources */,
 				C00426E32592CF4700DD529F /* MOWidgetCommons.swift in Sources */,
 				E05C3C872583B7F00018AC1D /* MOWidget.intentdefinition in Sources */,
-				E05C3C822583B7EF0018AC1D /* MOWidget.swift in Sources */,
+				E05C3C822583B7EF0018AC1D /* MOWidgetFitness.swift in Sources */,
 				C0AF5C182589FB4E00CAB802 /* MOWidgetSmallViews.swift in Sources */,
+				E0590D2E259724DD000E08EE /* MOWidgetSecond.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +356,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				C05BB38A25820C2500EFB71B /* Base */,
+				E0590CB82596DD1F000E08EE /* zh-Hans */,
+				E0590CCC2596E4AF000E08EE /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -309,8 +366,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				C05BB38F25820C2800EFB71B /* Base */,
+				E0590CB92596DD1F000E08EE /* zh-Hans */,
+				E0590CCD2596E4AF000E08EE /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E0590CC82596E447000E08EE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0590CC72596E447000E08EE /* en */,
+				E0590CCB2596E44C000E08EE /* zh-Hans */,
+				E0590CCE2596E4AF000E08EE /* zh-Hant */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -320,6 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -381,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -438,6 +509,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MOWidgetDemo/MOWidgetDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WUQQBVA6S;
 				INFOPLIST_FILE = MOWidgetDemo/Info.plist;
@@ -447,6 +520,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = moxiaoyan.MOWidgetDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MOWidgetDemo/MOWidgetDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -458,6 +533,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MOWidgetDemo/MOWidgetDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WUQQBVA6S;
 				INFOPLIST_FILE = MOWidgetDemo/Info.plist;
@@ -467,6 +544,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = moxiaoyan.MOWidgetDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MOWidgetDemo/MOWidgetDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

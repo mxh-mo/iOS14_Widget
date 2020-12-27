@@ -20,9 +20,13 @@ class ViewController: UIViewController {
     view.addSubview(btn)
   }
 
-    @objc func clickBtn() {
-        WidgetCenter.shared.reloadAllTimelines()
-    }
+  @objc func clickBtn() {
+    WidgetCenter.shared.reloadAllTimelines()
+  }
+  
+  func login() {
+    
+  }
   
 
 }
