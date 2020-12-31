@@ -363,6 +363,14 @@ public func setScreenHeight(_ screenHeight: CGFloat) -> CGFloat {
 NSLocalizedString("widget.actives", comment: "actives")
 ```
 
+​	另外widget的name和description直接写key就行，不需要用NSLocalizedString：[参考](https://developer.apple.com/forums/thread/663091)
+
+```swift
+...
+.configurationDisplayName("widget.name")
+.description("widget.description")
+```
+
 ----
 
 # 六、Multiple

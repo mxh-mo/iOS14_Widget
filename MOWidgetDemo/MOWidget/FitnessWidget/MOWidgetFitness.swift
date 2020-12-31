@@ -78,8 +78,8 @@ struct MOWidgetFitness: Widget {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
         MOWidgetEntryView(entry: entry)
     }
-    .configurationDisplayName(NSLocalizedString("widget.name", comment: "name"))
-    .description(NSLocalizedString("widget.description", comment: "description"))
+    .configurationDisplayName("widget.name")
+    .description("widget.description")
     .supportedFamilies([.systemSmall, .systemMedium])
   }
 }

@@ -46,4 +46,12 @@ class WWAppGroupManager: NSObject {
     }
     return info
   }
+  
+  @objc static func setUserFile() {
+    let groupFileUrl: URL? = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: kAppGroupIdentify)
+    guard let url: URL = groupFileUrl else {
+      print("app group: get file nil")
+      return
+    }
+  }
 }
