@@ -33,7 +33,7 @@ struct MOStepsView: View {
               VStack(spacing: 1) {
                 ForEach([0, 1, 2, 3, 4, 6, 7], id: \.self) { value in
                   Circle()
-                    .frame(width: kScale * 1, height: kScale * 1)
+                    .frame(width: 1, height: 1)
                     .foregroundColor(Color("dottedLine"))
                 }
               }

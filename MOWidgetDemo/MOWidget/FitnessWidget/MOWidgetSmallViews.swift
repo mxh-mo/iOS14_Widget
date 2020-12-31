@@ -133,30 +133,38 @@ struct MOSmallView: View {
       VStack(alignment: .leading) {
         HStack {
           MOCricleView(progress: data.progress())
-            .frame(width: kScale * 52, height: kScale * 52, alignment: .leading)
+            .frame(width: 52, height: 52, alignment: .leading)
             .foregroundColor(.blue)
           Spacer()
         }
         Spacer().frame(height: 16)
+        
         HStack {
-          Text("\(active)/\(activeGoal) \(activitiesUnits)")
-            .foregroundColor(rgbColor(0xff00D48A))
+          Text("\(active)/\(activeGoal)")
+            .font(.system(size: 16, weight: .medium))
+          Spacer().frame(width: 2.0)
+          Text("\(activitiesUnits)")
             .font(.system(size: kScale * 16, weight: .medium))
         }
+        .foregroundColor(rgbColor(0xff00D48A))
 
-        Spacer().frame(height: 4)
         HStack {
-          Text("\(excercise)/\(excerciseGoal) \(exerciseUnits)")
-            .foregroundColor(rgbColor(0xff008BE8))
+          Text("\(excercise)/\(excerciseGoal)")
+            .font(.system(size: 16, weight: .medium))
+          Spacer().frame(width: 2.0)
+          Text("\(exerciseUnits)")
             .font(.system(size: kScale * 16, weight: .medium))
         }
-
-        Spacer().frame(height: 4)
+        .foregroundColor(rgbColor(0xff008BE8))
+      
         HStack {
-          Text("\(step)/\(stepGoal) \(stepsUnits)")
-            .foregroundColor(rgbColor(0xffFF5B18))
+          Text("\(step)/\(stepGoal)")
+            .font(.system(size: 16, weight: .medium))
+          Spacer().frame(width: 2.0)
+          Text("\(stepsUnits)")
             .font(.system(size: kScale * 16, weight: .medium))
         }
+        .foregroundColor(rgbColor(0xffFF5B18))
 
       }
       .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 0))
