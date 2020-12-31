@@ -26,14 +26,14 @@ struct MOActivitiesView: View {
               VStack(spacing: 1) {
                 ForEach([0, 1, 2], id: \.self) { value in
                   Circle()
-                    .frame(width: kScale * 1, height: kScale * 1)
+                    .frame(width: 1, height: 1)
                     .foregroundColor(Color("dottedLine"))
                 }
               }
             }
             // value point
             Circle()
-              .frame(width: kScale * 5, height: kScale * 5)
+              .frame(width: 5, height: 5)
               .foregroundColor(rgbColor(0xff00D48A).opacity(activities[index] ? 1 : 0.3))
           }
         }

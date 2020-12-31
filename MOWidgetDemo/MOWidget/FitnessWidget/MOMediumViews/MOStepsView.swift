@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MOStepsView: View {
   var steps: [Float]
-  let maxHeight: CGFloat = kScale * 13.0
   var maximun: Float = 0.0
 
   init(steps: [Float]) {
@@ -43,10 +42,10 @@ struct MOStepsView: View {
             if (steps[index] > 0.1) {
               Capsule()
                 .fill(rgbColor(0xffFF5B18))
-                .frame(width: kScale * 2, height: maxHeight * CGFloat((steps[index] / self.maximun)))
+                .frame(width: 2, height: 13 * CGFloat((steps[index] / self.maximun)))
             } else {
               Circle()
-                .frame(width: kScale * 2, height: kScale * 2)
+                .frame(width: 2, height: 2)
                 .foregroundColor(rgbColor(0xffFF5B18).opacity(0.3))
             }
           }
