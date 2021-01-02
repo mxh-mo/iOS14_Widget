@@ -53,7 +53,9 @@ struct MOWidgetEntryView : View {
   
   var body: some View {
     switch family {
-    case .systemSmall: MOSmallView(data: MOFitnessData())
+    case .systemSmall:
+      MOSmallView(data: MOFitnessData())
+        .widgetURL(URL(string: "mo.widget.small"))
     case .systemMedium:
       GeometryReader { geometry in
         HStack {
@@ -64,6 +66,7 @@ struct MOWidgetEntryView : View {
                        steps: MOFitnessData().steps)
             .frame(width: geometry.size.width/2, height: geometry.size.height)
         }
+        .widgetURL(URL(string: "mo.widget.medium"))
       }
     default: MOSmallView(data: MOFitnessData())
     }

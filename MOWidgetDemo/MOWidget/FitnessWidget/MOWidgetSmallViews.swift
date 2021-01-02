@@ -7,6 +7,89 @@
 
 import SwiftUI
 
+// MARK: - small view
+struct MOSmallView: View {
+  let data: MOFitnessData
+  var body: some View {
+    GeometryReader { geometry in
+      // 仅为获得scale
+      Spacer().frame(height: setScreenHeight(geometry.size.height))
+      
+      VStack(alignment: .leading) {
+        HStack {
+          Link(destination: URL(string: "mo.cricleview.link")!) {
+            MOCricleView(progress: data.progress())
+              .frame(width: 52, height: 52, alignment: .leading)
+              .foregroundColor(.blue)
+          }
+          Spacer()
+        }
+        
+        Spacer().frame(height: 16)
+        
+        Link(destination: URL(string: "mo.numberView.link")!) {
+          MONumberView(data: data)
+        }
+      }
+      .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 0))
+    }
+  }
+}
+
+// MARK: - number view
+struct MONumberView: View {
+  let data: MOFitnessData
+  let activitiesUnits: String = NSLocalizedString("widget.activeUnits", comment: "hour")
+  let exerciseUnits: String = NSLocalizedString("widget.exerciseUnits", comment: "minute")
+  let stepsUnits: String = NSLocalizedString("widget.stepsUnits", comment: "step")
+  var excercise: String
+  var excerciseGoal: String
+  var active: String
+  var activeGoal: String
+  var step: String
+  var stepGoal: String
+  init(data: MOFitnessData) {
+    self.data = data
+    active = data.activesNow > 0 ? "\(data.activesNow)" : "— "
+    activeGoal = data.activesGoal > 0 ? "\(data.activesGoal)" : "— "
+    
+    excercise = data.exercisesNow > 0 ? "\(data.exercisesNow)" : "— "
+    excerciseGoal = data.exercisesGoal > 0 ? "\(data.exercisesGoal)" : "— "
+    
+    step = data.stepsNow > 0 ? "\(data.stepsNow)" : "— "
+    stepGoal = data.stepsGoal > 0 ? "\(data.stepsGoal)" : "— "
+  }
+  var body: some View {
+    HStack {
+      Text("\(active)/\(activeGoal)")
+        .font(.system(size: 16, weight: .medium))
+      Spacer().frame(width: 2.0)
+      Text("\(activitiesUnits)")
+        .font(.system(size: kScale * 16, weight: .medium))
+    }
+    .foregroundColor(rgbColor(0xff00D48A))
+
+    HStack {
+      Text("\(excercise)/\(excerciseGoal)")
+        .font(.system(size: 16, weight: .medium))
+      Spacer().frame(width: 2.0)
+      Text("\(exerciseUnits)")
+        .font(.system(size: kScale * 16, weight: .medium))
+    }
+    .foregroundColor(rgbColor(0xff008BE8))
+  
+    HStack {
+      Text("\(step)/\(stepGoal)")
+        .font(.system(size: 16, weight: .medium))
+      Spacer().frame(width: 2.0)
+      Text("\(stepsUnits)")
+        .font(.system(size: kScale * 16, weight: .medium))
+    }
+    .foregroundColor(rgbColor(0xffFF5B18))
+  }
+}
+
+// MARK: - circle view
 struct MOCricleView: View {
   var progress: [Float]
   // background
@@ -101,73 +184,6 @@ struct MOCricleView: View {
         }
         .stroke(rgbColor(0xffFF5B18), style: StrokeStyle(lineWidth: 7, lineCap: .round, lineJoin: .miter))
       }
-    }
-  }
-}
-
-struct MOSmallView: View {
-  let data: MOFitnessData
-  let activitiesUnits: String = NSLocalizedString("widget.activeUnits", comment: "hour")
-  let exerciseUnits: String = NSLocalizedString("widget.exerciseUnits", comment: "minute")
-  let stepsUnits: String = NSLocalizedString("widget.stepsUnits", comment: "step")
-  var excercise: String
-  var excerciseGoal: String
-  var active: String
-  var activeGoal: String
-  var step: String
-  var stepGoal: String
-  init(data: MOFitnessData) {
-    self.data = data
-    active = data.activesNow > 0 ? "\(data.activesNow)" : "— "
-    activeGoal = data.activesGoal > 0 ? "\(data.activesGoal)" : "— "
-    
-    excercise = data.exercisesNow > 0 ? "\(data.exercisesNow)" : "— "
-    excerciseGoal = data.exercisesGoal > 0 ? "\(data.exercisesGoal)" : "— "
-    
-    step = data.stepsNow > 0 ? "\(data.stepsNow)" : "— "
-    stepGoal = data.stepsGoal > 0 ? "\(data.stepsGoal)" : "— "
-  }
-  var body: some View {
-    GeometryReader { geometry in
-      Spacer().frame(height: setScreenHeight(geometry.size.height))
-      VStack(alignment: .leading) {
-        HStack {
-          MOCricleView(progress: data.progress())
-            .frame(width: 52, height: 52, alignment: .leading)
-            .foregroundColor(.blue)
-          Spacer()
-        }
-        Spacer().frame(height: 16)
-        
-        HStack {
-          Text("\(active)/\(activeGoal)")
-            .font(.system(size: 16, weight: .medium))
-          Spacer().frame(width: 2.0)
-          Text("\(activitiesUnits)")
-            .font(.system(size: kScale * 16, weight: .medium))
-        }
-        .foregroundColor(rgbColor(0xff00D48A))
-
-        HStack {
-          Text("\(excercise)/\(excerciseGoal)")
-            .font(.system(size: 16, weight: .medium))
-          Spacer().frame(width: 2.0)
-          Text("\(exerciseUnits)")
-            .font(.system(size: kScale * 16, weight: .medium))
-        }
-        .foregroundColor(rgbColor(0xff008BE8))
-      
-        HStack {
-          Text("\(step)/\(stepGoal)")
-            .font(.system(size: 16, weight: .medium))
-          Spacer().frame(width: 2.0)
-          Text("\(stepsUnits)")
-            .font(.system(size: kScale * 16, weight: .medium))
-        }
-        .foregroundColor(rgbColor(0xffFF5B18))
-
-      }
-      .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 0))
     }
   }
 }

@@ -15,15 +15,24 @@ struct MOMediumView: View {
   var body: some View {
     HStack(spacing: 0) {
       VStack(alignment: .leading) {
-        MOActivitiesView(activities: activities)
-          .frame(height: 30)
+        Link(destination: URL(string: "mo.activitiesView.link")!) {
+          MOActivitiesView(activities: activities)
+            .frame(height: 30)
+        }
+
         Spacer().frame(height:10)
-        MOExcercisesView(exercises: exercises)
-          .frame(height: 30)
+        Link(destination: URL(string: "mo.excercisesView.link")!) {
+          MOExcercisesView(exercises: exercises)
+            .frame(height: 30)
+        }
         Spacer().frame(height:10)
-        MOStepsView(steps: steps)
-          .frame(height: 30)
-        MOTimeView()
+        Link(destination: URL(string: "mo.stepsView.link")!) {
+          MOStepsView(steps: steps)
+            .frame(height: 30)
+        }
+        Link(destination: URL(string: "mo.timeView.link")!) {
+          MOTimeView()
+        }
       }
       .padding()
       .padding(.leading, -16)

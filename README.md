@@ -133,6 +133,31 @@ struct MOWidgetEntryView : View {
   }
 }
 ```
+可以根据不同的family返回不同的view：
+
+```swift
+struct MOWidgetEntryView : View {
+  var entry: Provider.Entry
+  @Environment(\.widgetFamily) var family
+  
+  var body: some View {
+    switch family {
+    case .systemSmall: MOSmallView(data: MOFitnessData())
+    case .systemMedium:
+      // GeometryReader 可以获取到系统给当前View所分配的size
+      GeometryReader { geometry in 
+        HStack {
+          MOSmallView(/* parameter */)
+            .frame(width: geometry.size.width/2, height: geometry.size.height)
+          MOMediumView(/* parameter */)
+            .frame(width: geometry.size.width/2, height: geometry.size.height)
+        }
+      }
+    default: Text(entry.date, style: .time)
+    }
+  }
+}
+```
 
 
 ----
@@ -239,6 +264,9 @@ func getTimeline(for configuration: ConfigurationIntent, in context: Context, co
   }
 }
 ```
+补充：跑主App的时候widget的log是打印不出来的，需要先跑起来主app，再跑widget，就看到widget的log了~
+
+----
 
 ## 2、数据共享
 
@@ -373,7 +401,51 @@ NSLocalizedString("widget.actives", comment: "actives")
 
 ----
 
-# 六、Multiple
+# 六、点击
+使用`.widgetURL(URL)`可以给widget添加整体的点击URL，点击会打开主app并触发`scene(_ scene: , openURLContexts URLContexts:)`方法：
+
+```swift
+struct MOWidgetEntryView : View {
+  var entry: Provider.Entry
+  @Environment(\.widgetFamily) var family
+  
+  var body: some View {
+    switch family {
+    case .systemSmall:
+      MOSmallView(data: MOFitnessData())
+        .widgetURL(URL(string: "mo.widget.small"))
+    case .systemMedium:
+      GeometryReader { geometry in
+        HStack {
+          MOSmallView(/* parameters */)
+            .frame(width: geometry.size.width/2, height: geometry.size.height)
+          MOMediumView(/* parameters */)
+            .frame(width: geometry.size.width/2, height: geometry.size.height)
+        }
+        .widgetURL(URL(string: "mo.widget.medium"))
+      }
+    default: MOSmallView(data: MOFitnessData())
+    }
+  }
+}
+```
+
+```swift
+func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+  for context in URLContexts {
+    print("context: \(context.url)")
+  }
+}
+```
+如果需要单独设置点击url，可以使用`Link`，但是`..systemSmall` family 不能单独设置子视图的Link：
+
+```swift
+Link(destination: URL(string: "mo.numberView.link")!) {
+  MONumberView(data: data)
+}
+```
+
+# 七、Multiple
 
 ## 1、多个Widget
 
