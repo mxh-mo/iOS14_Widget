@@ -9,19 +9,66 @@ import WidgetKit
 import SwiftUI
 import Intents
 
+//class MODevice: INObject {
+//  static let availableTicWatch = [
+//    MODevice(identifier:"01", display: "TicWatch"),
+//    MODevice(identifier:"02", display: "TicWatch Pro"),
+//    MODevice(identifier:"03", display: "TicWatch E3")
+//  ]
+//  static let availableTicPod = [
+//    MODevice(identifier:"01", display: "TicPod"),
+//    MODevice(identifier:"02", display: "TicPod Pro"),
+//    MODevice(identifier:"03", display: "TicPod Plus")
+//  ]
+//}
+
+//class IntenHandler: INExtension, ConfigurationIntentHandling {
+//  func provideDeviceOptionsCollection(for intent: ConfigurationIntent, with completion: @escaping (INObjectCollection<Device>?, Error?) -> Void) {
+//    var availableDevices: [MODevice]
+//    switch intent.deviceType {
+//    case .ticWatch: availableDevices = MODevice.availableTicWatch
+//    case .ticPod: availableDevices = MODevice.availableTicPod
+//    default: availableDevices = MODevice.availableTicWatch
+//    }
+//
+//    let characters: [Device] = availableDevices.map { device in
+//      let gameCharacter = Device (
+//        identifier: device.identifier,
+//        display: device.displayString
+//      )
+//      return gameCharacter
+//    }
+//    // Create a collection with the array of characters.
+//    let collection = INObjectCollection(items: characters)
+//
+//    // Call the completion handler, passing the collection.
+//    completion(collection, nil)
+//  }
+//}
+
 struct Provider: IntentTimelineProvider {
+  typealias Intent = ConfigurationIntent
+  
   func placeholder(in context: Context) -> MOSimpleEntry {
+    print("placeholder")
     return MOSimpleEntry(date: Date(), configuration: ConfigurationIntent(), data: MOFitnessData())
   }
 
   func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (MOSimpleEntry) -> ()) {
+    print("getSnapshot")
     let entry = MOSimpleEntry(date: Date(), configuration: configuration, data: MOFitnessData())
     completion(entry)
   }
 
   func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<MOSimpleEntry>) -> ()) {
+    print("getTimeline")
+    print("getTimeline deviceType: \(configuration.deviceType.rawValue)")
+    print("getTimeline device: \(configuration.device?.identifier)")
     var entries: [MOSimpleEntry] = []
     let currentDate = Date()
+    
+//    let name = configuration.character.name
+    
     let entryDate = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
     MODataSouce.shared.fetchData { (data) in
       // 请求成功

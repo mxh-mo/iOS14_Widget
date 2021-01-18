@@ -12,6 +12,10 @@
 		C00426F92592EA4800DD529F /* MOActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00426F82592EA4800DD529F /* MOActivitiesView.swift */; };
 		C00427002592F00E00DD529F /* MOExcercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00426FC2592F00900DD529F /* MOExcercisesView.swift */; };
 		C00427072592F30800DD529F /* MOStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00427032592F30400DD529F /* MOStepsView.swift */; };
+		C052722625AEE7AC00412A83 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C052722525AEE7AC00412A83 /* Intents.framework */; };
+		C052722925AEE7AC00412A83 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C052722825AEE7AC00412A83 /* IntentHandler.swift */; };
+		C052723E25AEE7AC00412A83 /* MOSelectDeviceIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C052722425AEE7AC00412A83 /* MOSelectDeviceIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C052724D25AEE7EB00412A83 /* MOWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E05C3C832583B7EF0018AC1D /* MOWidget.intentdefinition */; };
 		C05BB38425820C2500EFB71B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BB38325820C2500EFB71B /* AppDelegate.swift */; };
 		C05BB38625820C2500EFB71B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BB38525820C2500EFB71B /* SceneDelegate.swift */; };
 		C05BB38825820C2500EFB71B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BB38725820C2500EFB71B /* ViewController.swift */; };
@@ -19,6 +23,8 @@
 		C05BB38D25820C2800EFB71B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C05BB38C25820C2800EFB71B /* Assets.xcassets */; };
 		C05BB39025820C2800EFB71B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05BB38E25820C2800EFB71B /* LaunchScreen.storyboard */; };
 		C0AF5C182589FB4E00CAB802 /* MOWidgetSmallViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF5C172589FB4E00CAB802 /* MOWidgetSmallViews.swift */; };
+		C0BFAC8825B534160073CCF0 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C052722825AEE7AC00412A83 /* IntentHandler.swift */; };
+		C0BFAC8C25B534160073CCF0 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C052722825AEE7AC00412A83 /* IntentHandler.swift */; };
 		E022B7272598991500AFE562 /* MODataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0590D3A25972759000E08EE /* MODataSource.swift */; };
 		E022B74225989E2100AFE562 /* Info.strings in Resources */ = {isa = PBXBuildFile; fileRef = E022B74425989E2100AFE562 /* Info.strings */; };
 		E02C25B225972C3700416F82 /* MOWidgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02C25B125972C3700416F82 /* MOWidgetManager.swift */; };
@@ -37,6 +43,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C052723C25AEE7AC00412A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C05BB37825820C2500EFB71B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C052722325AEE7AC00412A83;
+			remoteInfo = MOSelectDeviceIntent;
+		};
 		E05C3C892583B7F00018AC1D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C05BB37825820C2500EFB71B /* Project object */;
@@ -53,6 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				C052723E25AEE7AC00412A83 /* MOSelectDeviceIntent.appex in Embed App Extensions */,
 				E05C3C8B2583B7F00018AC1D /* MOWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -66,6 +80,13 @@
 		C00426F82592EA4800DD529F /* MOActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOActivitiesView.swift; sourceTree = "<group>"; };
 		C00426FC2592F00900DD529F /* MOExcercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOExcercisesView.swift; sourceTree = "<group>"; };
 		C00427032592F30400DD529F /* MOStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOStepsView.swift; sourceTree = "<group>"; };
+		C052722425AEE7AC00412A83 /* MOSelectDeviceIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MOSelectDeviceIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C052722525AEE7AC00412A83 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		C052722825AEE7AC00412A83 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		C052722A25AEE7AC00412A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C052723025AEE7AC00412A83 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		C052727625AEF83300412A83 /* MOWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MOWidgetExtension.entitlements; sourceTree = "<group>"; };
+		C052727A25AEF84000412A83 /* MOSelectDeviceIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MOSelectDeviceIntent.entitlements; sourceTree = "<group>"; };
 		C05BB38025820C2500EFB71B /* MOWidgetDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOWidgetDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05BB38325820C2500EFB71B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C05BB38525820C2500EFB71B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +121,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C052722125AEE7AC00412A83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C052722625AEE7AC00412A83 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C05BB37D25820C2500EFB71B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,11 +159,23 @@
 			path = MOMediumViews;
 			sourceTree = "<group>";
 		};
+		C052722725AEE7AC00412A83 /* MOSelectDeviceIntent */ = {
+			isa = PBXGroup;
+			children = (
+				C052727A25AEF84000412A83 /* MOSelectDeviceIntent.entitlements */,
+				C052722825AEE7AC00412A83 /* IntentHandler.swift */,
+				C052722A25AEE7AC00412A83 /* Info.plist */,
+			);
+			path = MOSelectDeviceIntent;
+			sourceTree = SOURCE_ROOT;
+		};
 		C05BB37725820C2500EFB71B = {
 			isa = PBXGroup;
 			children = (
+				C052727625AEF83300412A83 /* MOWidgetExtension.entitlements */,
 				C05BB38225820C2500EFB71B /* MOWidgetDemo */,
 				E05C3C802583B7EF0018AC1D /* MOWidget */,
+				C052722725AEE7AC00412A83 /* MOSelectDeviceIntent */,
 				E05C3C7B2583B7EF0018AC1D /* Frameworks */,
 				C05BB38125820C2500EFB71B /* Products */,
 			);
@@ -145,6 +186,7 @@
 			children = (
 				C05BB38025820C2500EFB71B /* MOWidgetDemo.app */,
 				E05C3C7A2583B7EF0018AC1D /* MOWidgetExtension.appex */,
+				C052722425AEE7AC00412A83 /* MOSelectDeviceIntent.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,6 +234,8 @@
 			children = (
 				E05C3C7C2583B7EF0018AC1D /* WidgetKit.framework */,
 				E05C3C7E2583B7EF0018AC1D /* SwiftUI.framework */,
+				C052722525AEE7AC00412A83 /* Intents.framework */,
+				C052723025AEE7AC00412A83 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -202,9 +246,9 @@
 				E0590D31259726B2000E08EE /* FitnessWidget */,
 				E0590D32259726C1000E08EE /* SecondWidget */,
 				E0590D3A25972759000E08EE /* MODataSource.swift */,
+				E05C3C832583B7EF0018AC1D /* MOWidget.intentdefinition */,
 				C00426DD2592C8D400DD529F /* MOWidgetCommons.swift */,
 				E0590CC82596E447000E08EE /* Localizable.strings */,
-				E05C3C832583B7EF0018AC1D /* MOWidget.intentdefinition */,
 				E05C3C842583B7F00018AC1D /* Assets.xcassets */,
 				E05C3C862583B7F00018AC1D /* Info.plist */,
 			);
@@ -214,6 +258,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C052722325AEE7AC00412A83 /* MOSelectDeviceIntent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C052724425AEE7AC00412A83 /* Build configuration list for PBXNativeTarget "MOSelectDeviceIntent" */;
+			buildPhases = (
+				C052722025AEE7AC00412A83 /* Sources */,
+				C052722125AEE7AC00412A83 /* Frameworks */,
+				C052722225AEE7AC00412A83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MOSelectDeviceIntent;
+			productName = MOSelectDeviceIntent;
+			productReference = C052722425AEE7AC00412A83 /* MOSelectDeviceIntent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C05BB37F25820C2500EFB71B /* MOWidgetDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C05BB39425820C2800EFB71B /* Build configuration list for PBXNativeTarget "MOWidgetDemo" */;
@@ -227,6 +288,7 @@
 			);
 			dependencies = (
 				E05C3C8A2583B7F00018AC1D /* PBXTargetDependency */,
+				C052723D25AEE7AC00412A83 /* PBXTargetDependency */,
 			);
 			name = MOWidgetDemo;
 			productName = MOWidgetDemo;
@@ -256,9 +318,12 @@
 		C05BB37825820C2500EFB71B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					C052722325AEE7AC00412A83 = {
+						CreatedOnToolsVersion = 12.3;
+					};
 					C05BB37F25820C2500EFB71B = {
 						CreatedOnToolsVersion = 12.2;
 						LastSwiftMigration = 1220;
@@ -285,11 +350,19 @@
 			targets = (
 				C05BB37F25820C2500EFB71B /* MOWidgetDemo */,
 				E05C3C792583B7EF0018AC1D /* MOWidgetExtension */,
+				C052722325AEE7AC00412A83 /* MOSelectDeviceIntent */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C052722225AEE7AC00412A83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C05BB37E25820C2500EFB71B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,11 +386,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C052722025AEE7AC00412A83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C052724D25AEE7EB00412A83 /* MOWidget.intentdefinition in Sources */,
+				C052722925AEE7AC00412A83 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C05BB37C25820C2500EFB71B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C05BB38825820C2500EFB71B /* ViewController.swift in Sources */,
+				C0BFAC8C25B534160073CCF0 /* IntentHandler.swift in Sources */,
 				E02C25B825972D6A00416F82 /* MOOCTestVIew.m in Sources */,
 				C05BB38425820C2500EFB71B /* AppDelegate.swift in Sources */,
 				E05C3C882583B7F00018AC1D /* MOWidget.intentdefinition in Sources */,
@@ -341,6 +424,7 @@
 				E05C3C872583B7F00018AC1D /* MOWidget.intentdefinition in Sources */,
 				E05C3C822583B7EF0018AC1D /* MOWidgetFitness.swift in Sources */,
 				C0AF5C182589FB4E00CAB802 /* MOWidgetSmallViews.swift in Sources */,
+				C0BFAC8825B534160073CCF0 /* IntentHandler.swift in Sources */,
 				E0590D2E259724DD000E08EE /* MOWidgetSecond.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +432,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C052723D25AEE7AC00412A83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C052722325AEE7AC00412A83 /* MOSelectDeviceIntent */;
+			targetProxy = C052723C25AEE7AC00412A83 /* PBXContainerItemProxy */;
+		};
 		E05C3C8A2583B7F00018AC1D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E05C3C792583B7EF0018AC1D /* MOWidgetExtension */;
@@ -397,6 +486,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C052723F25AEE7AC00412A83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MOSelectDeviceIntent/MOSelectDeviceIntent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WUQQBVA6S;
+				INFOPLIST_FILE = MOSelectDeviceIntent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = moxiaoyan.MOWidgetDemo.MOSelectDeviceIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C052724025AEE7AC00412A83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MOSelectDeviceIntent/MOSelectDeviceIntent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WUQQBVA6S;
+				INFOPLIST_FILE = MOSelectDeviceIntent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = moxiaoyan.MOWidgetDemo.MOSelectDeviceIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C05BB39225820C2800EFB71B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -567,6 +698,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MOWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WUQQBVA6S;
 				INFOPLIST_FILE = MOWidget/Info.plist;
@@ -588,6 +720,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MOWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WUQQBVA6S;
 				INFOPLIST_FILE = MOWidget/Info.plist;
@@ -607,6 +740,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C052724425AEE7AC00412A83 /* Build configuration list for PBXNativeTarget "MOSelectDeviceIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C052723F25AEE7AC00412A83 /* Debug */,
+				C052724025AEE7AC00412A83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C05BB37B25820C2500EFB71B /* Build configuration list for PBXProject "MOWidgetDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
