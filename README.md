@@ -2,7 +2,7 @@
 
 ​	类似`iWatch`的`运动健康`小组件`Fitness widget`
 
-<img src="images/modelLight.png" alt="modelLight" style="zoom:50%;" /><img src="/Users/moxiaohui/iOS14_Widget/images/modeDark.png" alt="modeDark" style="zoom:50%;" />
+<img src="images/modelLight.png" alt="modelLight" style="zoom:50%;" /><img src="images/modeDark.png" alt="modeDark" style="zoom:50%;" />
 
 # 一、创建
 
