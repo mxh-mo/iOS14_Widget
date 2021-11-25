@@ -73,11 +73,11 @@
 	<key>INIntentDefinitionNamespace</key>
 	<string>88xZPY</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>20B50</string>
+	<string>20G95</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>12C33</string>
+	<string>12E262</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>12.3</string>
+	<string>12.5</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -118,6 +118,8 @@
 			<array>
 				<dict>
 					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
 					<string>Device Type</string>
@@ -166,6 +168,8 @@
 							<string>Confirmation</string>
 						</dict>
 					</array>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
 					<key>INIntentParameterTag</key>
 					<integer>21</integer>
 					<key>INIntentParameterType</key>
