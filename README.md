@@ -484,3 +484,5 @@ struct MOWigets: WidgetBundle {
 
 [SwiftUI](https://developer.apple.com/documentation/swiftui)
 
+[Apple Demo](https://developer.apple.com/documentation/widgetkit/building_widgets_using_widgetkit_and_swiftui)
+
