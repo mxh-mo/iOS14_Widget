@@ -2,7 +2,7 @@
 
 ​	类似`iWatch`的`运动健康`小组件`Fitness widget`
 
-<img src="images/modelLight.png" alt="modelLight" style="zoom:50%;" /><img src="/Users/moxiaohui/iOS14_Widget/images/modeDark.png" alt="modeDark" style="zoom:50%;" />
+<img src="images/modelLight.png" alt="modelLight" style="zoom:50%;" /><img src="images/modeDark.png" alt="modeDark" style="zoom:50%;" />
 
 # 一、创建
 
@@ -483,4 +483,6 @@ struct MOWigets: WidgetBundle {
 [Human Interface Guidelines - Widgets](https://developer.apple.com/design/human-interface-guidelines/ios/system-capabilities/widgets)
 
 [SwiftUI](https://developer.apple.com/documentation/swiftui)
+
+[Apple Demo](https://developer.apple.com/documentation/widgetkit/building_widgets_using_widgetkit_and_swiftui)
 
