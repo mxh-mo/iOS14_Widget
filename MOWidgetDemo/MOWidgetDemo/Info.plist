@@ -23,8 +23,7 @@
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>ConfigurationIntent</string>
-		<string>MODeviceSelectIntent</string>
-		<string>MOSelectDeviceIntent</string>
+		<string>DeviceSelectionIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
