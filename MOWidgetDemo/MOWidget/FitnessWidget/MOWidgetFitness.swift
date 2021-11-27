@@ -114,11 +114,3 @@ struct MOFitnessWidget_Previews: PreviewProvider {
         }
     }
 }
-
-@main
-struct MOWigets: WidgetBundle {
-    var body: some Widget {
-        MOWidgetFitness()
-//        MOWidgetSecond()
-    }
-}

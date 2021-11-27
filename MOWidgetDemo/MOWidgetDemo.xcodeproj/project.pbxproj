@@ -29,6 +29,8 @@
 		E05C3C822583B7EF0018AC1D /* MOWidgetFitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05C3C812583B7EF0018AC1D /* MOWidgetFitness.swift */; };
 		E05C3C852583B7F00018AC1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05C3C842583B7F00018AC1D /* Assets.xcassets */; };
 		E05C3C8B2583B7F00018AC1D /* MOWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E05C3C7A2583B7EF0018AC1D /* MOWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E0FCE94F2751DA390079CA76 /* MOWidgetSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCE94E2751DA390079CA76 /* MOWidgetSecond.swift */; };
+		E0FCE9552751DAE00079CA76 /* MOWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCE9542751DAE00079CA76 /* MOWidget.swift */; };
 		FD0FE3AC2750D6580008DC12 /* MOWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FD0FE3AB2750D6580008DC12 /* MOWidget.intentdefinition */; };
 		FD0FE3AD2750DB660008DC12 /* MOWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FD0FE3AB2750D6580008DC12 /* MOWidget.intentdefinition */; };
 /* End PBXBuildFile section */
@@ -93,6 +95,8 @@
 		E05C3C812583B7EF0018AC1D /* MOWidgetFitness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidgetFitness.swift; sourceTree = "<group>"; };
 		E05C3C842583B7F00018AC1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E05C3C862583B7F00018AC1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0FCE94E2751DA390079CA76 /* MOWidgetSecond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOWidgetSecond.swift; sourceTree = "<group>"; };
+		E0FCE9542751DAE00079CA76 /* MOWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOWidget.swift; sourceTree = "<group>"; };
 		FD0FE3AB2750D6580008DC12 /* MOWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MOWidget.intentdefinition; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,8 +193,10 @@
 		E05C3C802583B7EF0018AC1D /* MOWidget */ = {
 			isa = PBXGroup;
 			children = (
+				E0FCE9542751DAE00079CA76 /* MOWidget.swift */,
 				FD0FE3AB2750D6580008DC12 /* MOWidget.intentdefinition */,
 				E0590D31259726B2000E08EE /* FitnessWidget */,
+				E0FCE94D2751DA390079CA76 /* SecondWidget */,
 				E0590D3A25972759000E08EE /* MODataSource.swift */,
 				C00426DD2592C8D400DD529F /* MOWidgetCommons.swift */,
 				E0590CC82596E447000E08EE /* Localizable.strings */,
@@ -198,6 +204,14 @@
 				E05C3C862583B7F00018AC1D /* Info.plist */,
 			);
 			path = MOWidget;
+			sourceTree = "<group>";
+		};
+		E0FCE94D2751DA390079CA76 /* SecondWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCE94E2751DA390079CA76 /* MOWidgetSecond.swift */,
+			);
+			path = SecondWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +342,8 @@
 				E05C3C822583B7EF0018AC1D /* MOWidgetFitness.swift in Sources */,
 				C0AF5C182589FB4E00CAB802 /* MOWidgetSmallViews.swift in Sources */,
 				FD0FE3AC2750D6580008DC12 /* MOWidget.intentdefinition in Sources */,
+				E0FCE9552751DAE00079CA76 /* MOWidget.swift in Sources */,
+				E0FCE94F2751DA390079CA76 /* MOWidgetSecond.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
