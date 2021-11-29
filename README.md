@@ -130,9 +130,7 @@ struct MOWidgetEntryView : View {
     switch family {
     case .systemSmall: MOSmallView(data: MOFitnessData())
     case .systemMedium: MOMediumView(data: MOFitnessData())
-	case .systemLarge: MOLargeView(data: MOFitnessData())
-	// case .systemExtraLarge: iOS15后支持
-    default: Text(entry.date, style: .time)
+    case .systemLarge: MOLargeView(data: MOFitnessData())
     }
   }
 }
@@ -146,10 +144,10 @@ struct MOWidgetEntryView : View {
 struct MOWidget: Widget {
   let kind: String = "MOWidget"
   var body: some WidgetConfiguration { 
-  		...
+    ...
     }
     .configurationDisplayName("My Widget")
-		.supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
+    .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
   }
 }  
 ```
@@ -169,7 +167,7 @@ struct MOWidgetEntryView : View {
       MOSmallView(data: MOFitnessData())
         .widgetURL(URL(string: "mo.widget.small"))
     case .systemMedium:
-	      MOMediumView(data: MOFitnessData())
+      MOMediumView(data: MOFitnessData())
         .widgetURL(URL(string: "mo.widget.medium"))
 		。。。
     }
@@ -219,17 +217,13 @@ func getTimeline(for configuration: DeviceSelectionIntent, in context: Context, 
 
 # 6、Updating
 
-## 6.1、系统主动刷新
-
-一般进入`widget`所在的主页会触发刷新方法：如：用完`app`后退到主页面、滑动到`widget`所在的页面
-
-## 6.2、Timeline的刷新
+## 6.1、Timeline的刷新
 如上：2.3
 
-## 6.3、手动刷新
+## 6.2、手动刷新
 我们可以在主`App`里触发刷新`widget`。
 
-### 6.3.1、swift文件里刷新
+- swift文件里刷新
 
 ```swift
 import WidgetKit // 导入WidgetKit
@@ -237,7 +231,7 @@ WidgetCenter.shared.reloadAllTimelines() // 刷新所有的widget
 WidgetCenter.shared.reloadTimelines(ofKind: "MOWidget") // 刷新指定的widget
 ```
 
-### 6.3.2、OC文件里刷新
+- OC文件里刷新
 
 会比较麻烦：还是需要利用swift文件，加上一堆判断后调用刷新方法。
 
