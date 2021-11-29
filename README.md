@@ -43,7 +43,7 @@ struct MOWidget: Widget { // 同名的Widget
 }
 ```
 名字和描述在添加时显示：
-<img src="images/add_widget.png" align='left' style="zoom:45%;" />
+<img src="images/add_widget.png" style="zoom:45%;" />
 
 ## 2.2、Entry
 
@@ -354,7 +354,7 @@ class WWAppGroupManager: NSObject {
 
 `UI`调试必备`Canvas`，打开方式：
 
-<img src="images/canvas.png" align='left' style="zoom:100%;" />
+<img src="images/canvas.png" style="zoom:100%;" />
 
 
 用到了`PreviewProvider`，可以设置显示的`family`、`device`、等等：
@@ -468,7 +468,7 @@ struct MOWigets: WidgetBundle {
 }
 ```
 
-<img src="images/multi_widget.png" align='left' style="zoom:50%;" />
+<img src="images/multi_widget.png" style="zoom:50%;" />
 
 ## 9.2、一个widget支持多个target
 
